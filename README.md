@@ -744,3 +744,250 @@ class Program
 }
 ```
 
+> * №31. Даны два символа. Проверить, совпадают ли они.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите первый символ: ");
+        char a = char.Parse(Console.ReadLine());
+
+        Console.Write("Введите второй символ: ");
+        char b = char.Parse(Console.ReadLine());
+
+        if (a == b)
+        {
+            Console.WriteLine($"Символы совпадают");
+        }
+        else
+        {
+            Console.WriteLine($"Символы не совпадают");
+        }
+    }
+}
+```
+
+> * №32. Ввести число. Если оно кратно и 2, и 7, вывести «Кратно 14».
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number % 2 == 0 && number % 7 == 0)
+        {
+            Console.WriteLine($"Кратно 14");
+        }
+        else
+        {
+            Console.WriteLine($"Не кратно 14");
+        }
+    }
+}
+```
+
+> * №33. Ввести массу груза. Если масса превышает допустимые 3.5 тонны, вывести «Перегруз!».
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        double massa = double.Parse(Console.ReadLine());
+
+        if (massa > 3.5)
+        {
+            Console.WriteLine($"Перегруз!");
+        }
+    }
+}
+```
+
+> * №34. Ввести текущее время (часы от 0 до 23). Если время от 6 до 12, вывести «Доброе утро».
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите текущее время: ");
+        int time = int.Parse(Console.ReadLine());
+
+        if (time >= 6 && time <= 12)
+        {
+            Console.WriteLine($"Доброе утро!");
+        }
+    }
+}
+```
+
+> * №35. Ввести рост человека в см. Если рост больше 200 см, вывести «Очень высокий».
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите рост человека: ");
+        double height = double.Parse(Console.ReadLine());
+
+        if (height > 200)
+        {
+            Console.WriteLine($"Очень высокий");
+        }
+        else
+        {
+            Console.WriteLine($"Рост не превышает 200 см");
+        }
+    }
+}
+```
+
+> * №36. Дано двузначное число. Определить, какая из его цифр больше.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите двухзначное число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        int a = Math.Abs(number) / 10;
+        int b = Math.Abs(number) % 10;
+
+        if (a > b)
+        {
+            Console.WriteLine($"Первая цифра больше: {a}");
+        }
+        else if (b > a)
+        {
+            Console.WriteLine($"Вторая цифра больше: {b}");
+        }
+        else
+        {
+            Console.WriteLine($"Цифры равны");
+        }
+    }
+}
+```
+
+> * №37. Ввести стоимость товара. Если товар бесплатный (цена 0), вывести «Акция!».
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите стоимость товара: ");
+        double price = double.Parse(Console.ReadLine());
+
+        if (price == 0)
+        {
+            Console.WriteLine($"Акция!");
+        }
+        else
+        {
+            Console.WriteLine($"Товар платный");
+        }
+    }
+}
+```
+
+> * №38. Проверить, содержит ли введенное двузначное число одинаковые цифры.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите двухзначное число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        int a = Math.Abs(number) / 10;
+        int b = Math.Abs(number) % 10;
+
+        if (a == b)
+        {
+            Console.WriteLine($"Цифры одинаковые");
+        }
+        else 
+        {
+            Console.WriteLine($"Цифры не одинаковые");
+        }
+    }
+}
+```
+
+> * №39. Ввести уровень громкости (0–100). Если громкость превышает 80, вывести «Слишком громко для слуха».
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите уровень громкости: ");
+        int volume = int.Parse(Console.ReadLine());
+
+        if (volume > 80)
+        {
+            Console.WriteLine($"Слишком громко для слуха");
+        }
+        else
+        {
+            Console.WriteLine($"Уровень громкости в норме.");
+        }
+    }
+}
+```
+
+> * №40. Даны два числа. Если их сумма четная, вывести сумму, иначе вывести их разность.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите первое число: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите второе число: ");
+        int b = int.Parse(Console.ReadLine());
+
+        if ((a+b)%2==0)
+        {
+            Console.WriteLine($"Сумма чисел: {a+b}");
+        }
+        else
+        {
+            Console.WriteLine($"Разность чисел: {a-b}");
+        }
+    }
+}
+```
