@@ -464,3 +464,283 @@ class Program
     }
 }
 ```
+
+> * №21. Дано целое число. Проверить, равно ли оно нулю.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number == 0)
+        {
+            Console.WriteLine("Число равно нулю");
+        }
+        else
+        {
+            Console.WriteLine("Число не равно нулю");
+        }
+    }
+}
+```
+
+> * №22. Ввести два вещественных числа. Проверить, равны ли они с точностью до 0.001.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите первое число: ");
+        double a = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите второе число: ");
+        double b = double.Parse(Console.ReadLine());
+
+        if (Math.Abs(a - b) < 0.001)
+        {
+            Console.WriteLine($"Числа равны");
+        }
+        else
+        {
+            Console.WriteLine($"Числа не равны");
+        }
+    }
+}
+```
+
+> * №23. Проверить, делится ли число A на число B без остатка.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите первое число: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите второе число: ");
+        int b = int.Parse(Console.ReadLine());
+
+        if (b == 0)
+        {
+            Console.WriteLine($"На ноль делить нельзя!");
+        }
+        else if (a % b == 0)
+        {
+            Console.WriteLine($"a делится на b без остатка");
+        }
+        else
+        {
+            Console.WriteLine($"a не делится на b без остатка");
+        }
+    }
+}
+```
+
+> * №24. Даны два угла треугольника в градусах. Проверить, существует ли такой треугольник (сумма меньше 180).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите первый угол: ");
+        double a = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите второй угол: ");
+        double b = double.Parse(Console.ReadLine());
+
+        if (a > 0 && b > 0 && a + b < 180)
+        {
+            Console.WriteLine($"Такой треугольник существует.");
+        }
+        else
+        {
+            Console.WriteLine($"Такой треугольник не существует");
+        }
+    }
+}
+```
+
+> * №25. Ввести радиус круга и сторону квадрата. Определить, у какой фигуры площадь больше.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите радиус круга: ");
+        double rad = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите сторону квадрата: ");
+        double side = double.Parse(Console.ReadLine());
+
+        double circle = Math.PI * rad * rad;
+        double square = side * side;
+
+        if (circle > square)
+        {
+            Console.WriteLine($"Площадь круга больше");
+        }
+        else if (square > circle)
+        {
+            Console.WriteLine($"Площадь квадрата больше");
+        }
+        else 
+        {
+            Console.WriteLine($"Площади равны");
+        }
+    }
+}
+```
+
+> * №26. Ввести два числа. Вывести частное большего на меньшее (предусмотреть проверку деления на 0).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите первое число: ");
+        double a = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите второе число: ");
+        double b = double.Parse(Console.ReadLine());
+
+        double bigger;
+        double smaller;
+
+        if (a > b)
+        {
+            bigger = a;
+            smaller = b;
+        }
+        else
+        {
+            bigger = b;
+            smaller = a;
+        }
+        if (smaller == 0)
+        {
+            Console.WriteLine($"Делить на ноль нельзя");
+        }
+        else
+        {
+            Console.WriteLine($"Частное: {bigger / smaller}");
+        }
+    }
+}
+```
+
+> * №27. Проверить, является ли последняя цифра числа семеркой.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number % 10 == 7)
+        {
+            Console.WriteLine("Последняя цифра числа - 7");
+        }
+        else
+        {
+            Console.WriteLine("Последняя цифра числа не равна 7");
+        }
+    }
+}
+```
+
+> * №28. Дано число. Если оно нечетное и положительное, вывести «Да».
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number % 2 != 0 && number > 0)
+        {
+            Console.WriteLine("Да");
+        }
+        else
+        {
+            Console.WriteLine("Нет");
+        }
+    }
+}
+```
+
+> * №29. Ввести объем свободного места на диске (в ГБ). Если места меньше 5 ГБ, вывести предупреждение.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите объем свободного места на диске: ");
+        int m = int.Parse(Console.ReadLine());
+
+        if (m < 5)
+        {
+            Console.WriteLine("Мало свободного места!");
+        }
+        else
+        {
+            Console.WriteLine("Свободного места достаточно");
+        }
+    }
+}
+```
+
+> * №30. Пользователь вводит оценку (2, 3, 4, 5). Если оценка 4 или 5, вывести «Молодец», иначе «Нужно подтянуться».
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите оценку: ");
+        int grade = int.Parse(Console.ReadLine());
+
+        if (grade == 4 || grade == 5)
+        {
+            Console.WriteLine("Молодец");
+        }
+        else
+        {
+            Console.WriteLine("Нужно подтянуться");
+        }
+    }
+}
+```
+
