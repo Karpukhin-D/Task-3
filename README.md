@@ -231,3 +231,236 @@ class Program
     }
 }
 ```
+
+> * №11. Ввести число. Если оно трехзначное, вывести «Да», иначе «Нет».
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+        if (number >= 100 && number <= 999 || number <= -100 && number >= -999)
+        {
+            Console.WriteLine("Число трёхзначное");
+        }
+        else
+        {
+            Console.WriteLine("Число не трёхзначное");
+        }
+    }
+}
+```
+
+> * №12. Проверить, делится ли число на 3 без остатка.
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number % 3 == 0)
+        {
+            Console.WriteLine("Число делится на 3 без остатка");
+        }
+        else
+        {
+            Console.WriteLine("Число не делится на 3 без остатка");
+        }
+    }
+}
+```
+
+> * №13. Даны координаты точки на числовой прямой X. Определить, лежит ли точка правее нуля.
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите координаты точки: ");
+        int x = int.Parse(Console.ReadLine());
+
+        if (x > 0)
+        {
+            Console.WriteLine("Точка лежит правее нуля");
+        }
+        else
+        {
+            Console.WriteLine("Точка лежит левее нуля");
+        }
+    }
+}
+```
+
+> * №14. Ввести баланс счета. Если баланс отрицательный, вывести «Задолженность!».
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите баланс счета: ");
+        double balance = double.Parse(Console.ReadLine());
+
+        if (balance < 0)
+        {
+            Console.WriteLine("Задолженность!");
+        }
+    }
+}
+```
+
+> * №15. Пользователь вводит пароль (целое число). Если введен 1234, вывести «Вход выполнен», иначе «Неверный пароль».
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите пароль: ");
+        int password = int.Parse(Console.ReadLine());
+
+        if (password == 1234)
+        {
+            Console.WriteLine("Вход выполнен");
+        }
+        else
+        {
+            Console.WriteLine("Неверный пароль");
+        }
+    }
+}
+```
+
+> * №16. Проверить, является ли введенное число отрицательным.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int numb = int.Parse(Console.ReadLine());
+
+        if (numb < 0)
+        {
+            Console.WriteLine("Число отрицательное");
+        }
+        else
+        {
+            Console.WriteLine("Число не отрицательное");
+        }
+    }
+}
+```
+
+> * №17. Даны два числа. Вывести разность большего и меньшего числа.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите первое число: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите второе число: ");
+        int b = int.Parse(Console.ReadLine());
+
+        if (a > b)
+        {
+            Console.WriteLine($"Разность: {a - b}");
+        }
+        else
+        {
+            Console.WriteLine($"Разность: {b - a}");
+        }
+    }
+}
+```
+
+> * №18. Ввести сумму покупки. Если сумма превышает 1000 рублей, предоставить скидку 5% и вывести итоговую цену.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите сумму покупки: ");
+        double price = double.Parse(Console.ReadLine());
+
+        if (price > 1000)
+        {
+            price = price * 0.95;
+        }
+
+            Console.WriteLine($"Итоговая цена: {price}");
+    }
+}
+```
+
+> * №19. Ввести число. Если оно четное, разделить его на 2, если нечетное — умножить на 3.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number % 2 == 0)
+        {
+            number = number / 2;
+        }
+        else
+        {
+            number = number * 3;
+        }
+        Console.WriteLine($"Результат: {number}");
+    }
+}
+```
+
+> * №20. Пользователь вводит скорость движения. Если скорость выше 90 км/ч, вывести сообщение о нарушении.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите скорость движения: ");
+        int speed = int.Parse(Console.ReadLine());
+
+        if (speed > 90)
+        {
+            Console.WriteLine($"Превышена скорость!");
+        }
+        else
+        {
+            Console.WriteLine($"Скорость в норме!");
+        }
+    }
+}
+```
