@@ -991,3 +991,251 @@ class Program
     }
 }
 ```
+
+> * №41. Ввести количество страниц в документе. Если страниц больше 100, включить двухстороннюю печать.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите количество страниц: ");
+        int pages = int.Parse(Console.ReadLine());
+
+        if (pages > 100)
+        {
+            Console.WriteLine($"Включить двухстороннюю печать");
+        }
+        else
+        {
+            Console.WriteLine($"Односторонняя печать");
+        }
+    }
+}
+```
+
+> * №42. Проверить, является ли введенное целое число полным квадратом (для проверки использовать Math.Sqrt).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number >= 0 && Math.Sqrt(number) % 1 == 0)
+        {
+            Console.WriteLine($"Число является полным квадратом.");
+        }
+        else
+        {
+            Console.WriteLine($"Число не является полным квадратом.");
+        }
+    }
+}
+```
+
+> * №43. Ввести атмосферное давление. Если давление ниже 740 мм рт. ст., вывести «Пониженное давление».
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите давление: ");
+        double davlenie = double.Parse(Console.ReadLine());
+
+        if (davlenie < 740)
+        {
+            Console.WriteLine($"Пониженное давление");
+        }
+        else
+        {
+            Console.WriteLine($"Давление не понижено");
+        }
+    }
+}
+```
+
+> * №44. Ввести количество забитых мячей командами А и Б. Вывести победителя или сообщить о ничьей.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите голы команды А: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите голы команды Б: ");
+        int b = int.Parse(Console.ReadLine());
+
+        if (a > b)
+        {
+            Console.WriteLine($"Победила команда А");
+        }
+        else if (b > a)
+        {
+            Console.WriteLine($"Победила команда Б");
+        }
+        else
+        {
+            Console.WriteLine($"Ничья");
+        }
+    }
+}
+```
+
+> * №45. Дано число. Заменить его на абсолютную величину (модуль) без использования Math.Abs.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number < 0)
+        {
+            number = -number;
+        }
+
+        Console.WriteLine($"Модуль числа: {number}");
+    }
+}
+```
+
+> * №46. Ввести показатель уровня сахара в крови. Если показатель выше 6.1 ммоль/л, вывести «Выше нормы».
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите уровень сахара: ");
+        double sugar = double.Parse(Console.ReadLine());
+
+        if (sugar > 6.1)
+        {
+            Console.WriteLine($"Выше нормы");
+        }
+        else
+        {
+            Console.WriteLine($"Не выше нормы");
+        }
+    }
+}
+```
+
+> * №47. Проверить, хватит ли пользователю средств на счете для оплаты проезда стоимостью 35 рублей.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите баланс счета: ");
+        double bal = double.Parse(Console.ReadLine());
+
+        if (bal >= 35)
+        {
+            Console.WriteLine($"Средств хватает на проезд");
+        }
+        else
+        {
+            Console.WriteLine($"Недостаточно средств");
+        }
+    }
+}
+```
+
+> * №48. Ввести номер текущего этажа. Если этаж выше 10, вывести «Высотный этаж».
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер этажа: ");
+        int floor = int.Parse(Console.ReadLine());
+
+        if (floor > 10)
+        {
+            Console.WriteLine($"Высотный этаж");
+        }
+        else
+        {
+            Console.WriteLine($"Обычный этаж");
+        }
+    }
+}
+```
+
+> * №49. Ввести два слова. Проверить, одинаковы ли они по длине.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите первое слово: ");
+        string a = Console.ReadLine();
+
+        Console.Write("Введите второе слово: ");
+        string b = Console.ReadLine();
+
+        if (a.Length == b.Length)
+        {
+            Console.WriteLine($"Слова одинаковы по длине");
+        }
+        else
+        {
+            Console.WriteLine($"Слова разной длины");
+        }
+    }
+}
+```
+
+> * №50. Пользователь вводит целое число. Вывести строковое сообщение: «Число четное» либо «Число нечетное».
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number % 2 == 0)
+        {
+            Console.WriteLine($"Число четное");
+        }
+        else
+        {
+            Console.WriteLine($"Число нечетное");
+        }
+    }
+}
+```
