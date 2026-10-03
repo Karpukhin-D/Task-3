@@ -1239,3 +1239,439 @@ class Program
     }
 }
 ```
+
+### Раздел 2. Множественные ветвления else if и диапазоны
+---
+> * №51. Ввести балл за тест (0–100). Вывести оценку по шкале ECTS: A (90-100), B (80-89), C (70-79), D (60-69), F (менее 60).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите балл: ");
+        int score = int.Parse(Console.ReadLine());
+
+        if (score >= 90)
+            Console.WriteLine($"Оценка: A");
+        else if (score >= 80)
+            Console.WriteLine($"Оценка: B");
+        else if (score >= 70)
+            Console.WriteLine($"Оценка: C");
+        else if (score >= 60)
+            Console.WriteLine($"Оценка: D");
+        else
+            Console.WriteLine($"Оценка: F");
+    }
+}
+```
+
+> * №52. Ввести возраст человека. Определить категорию: ребенок (0-12), подросток (13-17), взрослый (18-64), пожилой (65+).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите возраст: ");
+        int age = int.Parse(Console.ReadLine());
+
+        if (age <= 12)
+            Console.WriteLine($"Ребенок");
+        else if (age <= 17)
+            Console.WriteLine($"Подросток");
+        else if (age <= 64)
+            Console.WriteLine($"Взрослый");
+        else
+            Console.WriteLine($"Пожилой");
+    }
+}
+```
+
+> * №53. Ввести температуру воды. Вывести ее агрегатное состояние: «Лед» (≤0), «Жидкость» (0<t<100), «Пар» (≥100).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите температуру воды: ");
+        double t = double.Parse(Console.ReadLine());
+
+        if (t <= 0)
+            Console.WriteLine($"Лед");
+        else if (t < 100)
+            Console.WriteLine($"Жидкость");
+        else
+            Console.WriteLine($"Пар");
+    }
+}
+```
+
+> * №54. Ввести уровень заряда аккумулятора смартфона (в %). Вывести: «Критический» (<10), «Низкий» (10-20), «Нормальный» (21-80), «Полный» (81-100).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите заряд: ");
+        int battery = int.Parse(Console.ReadLine());
+
+        if (battery < 10)
+            Console.WriteLine($"Критический");
+        else if (battery <= 20)
+            Console.WriteLine($"Низкий");
+        else if (battery <= 80)
+            Console.WriteLine($"Нормальный");
+        else
+            Console.WriteLine($"Полный");
+    }
+}
+```
+
+> * №55. Ввести число оборотов двигателя в минуту (RPM). Вывести режим: «Заглушен» (0), «Холостой ход» (1-900), «Рабочий» (901-3500), «Красная зона» (3501+).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите RPM: ");
+        int rpm = int.Parse(Console.ReadLine());
+
+        if (rpm == 0)
+            Console.WriteLine($"Заглушен");
+        else if (rpm <= 900)
+            Console.WriteLine($"Холостой ход");
+        else if (rpm <= 3500)
+            Console.WriteLine($"Рабочий");
+        else
+            Console.WriteLine($"Красная зона");
+    }
+}
+```
+
+> * №56. Ввести сумму дохода за год. Рассчитать подоходный налог: до 2.4 млн — 13%, до 5 млн — 15%, выше 5 млн — 18%.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите доход за год: ");
+        double sum = double.Parse(Console.ReadLine());
+
+        double tax;
+
+        if (sum <= 2400000)
+            tax = sum * 0.13;
+        else if (sum <= 5000000)
+            tax = sum * 0.15;
+        else
+            tax = sum * 0.18;
+
+        Console.WriteLine($"Налог: {tax} руб.");
+    }
+}
+```
+
+> * №57. По введенной координате X точки на плоскости (при Y=0) определить ее положение: на нуле, в положительной или отрицательной полуоси.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите X: ");
+        double x = double.Parse(Console.ReadLine());
+
+        if (x == 0)
+            Console.WriteLine($"Точка находится на нуле");
+        else if (x > 0)
+            Console.WriteLine($"Положительная полуось");
+        else
+            Console.WriteLine($"Отрицательная полуось");
+    }
+}
+```
+
+> * №58. Ввести индекс массы тела (ИМТ). Вывести категорию: дефицит веса (<18.5), норма (18.5-24.9), избыток (25-29.9), ожирение (30+).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите ИМТ: ");
+        double imt = double.Parse(Console.ReadLine());
+
+        if (imt < 18.5)
+            Console.WriteLine($"Дефицит веса");
+        else if (imt < 25)
+            Console.WriteLine($"Норма");
+        else if (imt < 30)
+            Console.WriteLine($"Избыток");
+        else
+            Console.WriteLine($"Ожирение");
+    }
+}
+```
+
+> * №59. Ввести скорость ветра (м/с). Вывести категорию по шкале: штиль (<0.2), легкий ветерок (0.2-5), умеренный (5.1-14), шторм (14.1-24), ураган (>24).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите скорость ветра: ");
+        double wind = double.Parse(Console.ReadLine());
+
+        if (wind < 0.2)
+            Console.WriteLine($"Штиль");
+        else if (wind <= 5)
+            Console.WriteLine($"Легкий ветерок");
+        else if (wind <= 14)
+            Console.WriteLine($"Умеренный");
+        else if (wind <= 24)
+            Console.WriteLine($"Шторм");
+        else
+            Console.WriteLine($"Ураган");
+    }
+}
+```
+
+> * №60. Ввести стаж работы сотрудника (в годах). Вывести размер надбавки: <1 года — 0%, 1-5 лет — 5%, 6-10 лет — 10%, >10 лет — 15%.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите стаж работы сотрудника: ");
+        int stazh = int.Parse(Console.ReadLine());
+
+        if (stazh < 1)
+            Console.WriteLine($"Надбавка: 0%");
+        else if (stazh <= 5)
+            Console.WriteLine($"Надбавка: 5%");
+        else if (stazh <= 10)
+            Console.WriteLine($"Надбавка: 10%");
+        else
+            Console.WriteLine($"Надбавка: 15%");
+    }
+}
+```
+
+> * №61. Пользователь вводит текущий час (0–23). Вывести: «Ночь» (0-5), «Утро» (6-11), «День» (12-17), «Вечер» (18-23).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите час: ");
+        int hour = int.Parse(Console.ReadLine());
+
+        if (hour <= 5)
+            Console.WriteLine($"Ночь");
+        else if (hour <= 11)
+            Console.WriteLine($"Утро");
+        else if (hour <= 17)
+            Console.WriteLine($"День");
+        else
+            Console.WriteLine($"Вечер");
+    }
+}
+```
+
+> * №62. Ввести толщину льда на водоеме (см). Вывести: «Выход запрещен» (<7), «Одиночный пешеход» (7-12), «Группа людей» (13-20), «Транспорт» (>20).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите толщину льда на водоёме: ");
+        int ice = int.Parse(Console.ReadLine());
+
+        if (ice < 7)
+            Console.WriteLine($"Выход запрещен");
+        else if (ice <= 12)
+            Console.WriteLine($"Одиночный пешеход");
+        else if (ice <= 20)
+            Console.WriteLine($"Группа людей");
+        else
+            Console.WriteLine($"Транспорт");
+    }
+}
+```
+
+> * №63. Даны три целых числа A, B, C. Найти максимальное из них, используя каскадное условие.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите A: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите B: ");
+        int b = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите C: ");
+        int c = int.Parse(Console.ReadLine());
+
+        int max;
+
+        if (a >= b && a >= c)
+            max = a;
+        else if (b >= a && b >= c)
+            max = b;
+        else
+            max = c;
+
+        Console.WriteLine($"Максимальное число: {max}");
+    }
+}
+```
+
+> * №64. Даны три числа. Найти минимальное из них.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите A: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите B: ");
+        int b = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите C: ");
+        int c = int.Parse(Console.ReadLine());
+
+        int min;
+
+        if (a <= b && a <= c)
+            min = a;
+        else if (b <= a && b <= c)
+            min = b;
+        else
+            min = c;
+
+        Console.WriteLine($"Минимальное число: {min}");
+    }
+}
+```
+
+> * №65. Даны три числа. Определить, сколько из них положительных (0, 1, 2 или 3).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите A: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите B: ");
+        int b = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите C: ");
+        int c = int.Parse(Console.ReadLine());
+
+        int count = 0;
+
+        if (a > 0)
+            count++;
+
+        if (b > 0)
+            count++;
+
+        if (c > 0)
+            count++;
+
+        Console.WriteLine($"Положительных чисел: {count}");
+    }
+}
+```
+
+> * №66. Ввести средний балл диплома. Вывести: «Без отличия» (<4.5), «Претендент на красный диплом» (4.5-4.74), «Красный диплом» (≥4.75).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите средний балл: ");
+        double grade = double.Parse(Console.ReadLine());
+
+        if (grade < 4.5)
+            Console.WriteLine($"Без отличия");
+        else if (grade < 4.75)
+            Console.WriteLine($"Претендент на красный диплом");
+        else
+            Console.WriteLine($"Красный диплом");
+    }
+}
+```
+
+> * №67. Ввести значение артериального давления (систолическое). Вывести: гипотония (<90), норма (90-120), предгипертензия (121-139), гипертензия (≥140).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите давление: ");
+        int pressure = int.Parse(Console.ReadLine());
+
+        if (pressure < 90)
+            Console.WriteLine($"Гипотония");
+        else if (pressure <= 120)
+            Console.WriteLine($"Норма");
+        else if (pressure <= 139)
+            Console.WriteLine($"Предгипертензия");
+        else
+            Console.WriteLine($"Гипертензия");
+    }
+}
+```
