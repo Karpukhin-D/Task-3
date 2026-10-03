@@ -2249,3 +2249,249 @@ class Program
     }
 }
 ```
+
+> * №91. Ввести значение влажности воздуха (%). Вывести: сухой воздух (<30), комфорт (30-60), повышенная влажность (>60).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите влажность: ");
+        int vlazh = int.Parse(Console.ReadLine());
+
+        if (vlazh < 30)
+            Console.WriteLine($"Сухой воздух");
+        else if (vlazh <= 60)
+            Console.WriteLine($"Комфорт");
+        else
+            Console.WriteLine($"Повышенная влажность");
+    }
+}
+```
+
+> * №92. Даны три числа. Проверить, сколько из них равны между собой (все разные, два равны, все три равны).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите A: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите B: ");
+        int b = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите C: ");
+        int c = int.Parse(Console.ReadLine());
+
+        if (a == b && b == c)
+            Console.WriteLine($"Все три равны");
+        else if (a == b || a == c || b == c)
+            Console.WriteLine($"Два числа равны");
+        else
+            Console.WriteLine($"Все разные");
+    }
+}
+```
+
+> * №93. Ввести номер четверти координатной плоскости (1–4) и вывести диапазоны знаков для координат X и Y.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер четверти: ");
+        int quarter = int.Parse(Console.ReadLine());
+
+        if (quarter == 1)
+            Console.WriteLine($"X положительный, Y положительный");
+        else if (quarter == 2)
+            Console.WriteLine($"X отрицательный, Y положительный");
+        else if (quarter == 3)
+            Console.WriteLine($"X отрицательный, Y отрицательный");
+        else if (quarter == 4)
+            Console.WriteLine($"X положительный, Y отрицательный");
+        else
+            Console.WriteLine($"Такой четверти нет");
+    }
+}
+```
+
+> * №94. Ввести температуру процессора компьютера. Вывести: холодный (<45), нормальная нагрузка (45-75), троттлинг/перегрев (>75).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите температуру процессора: ");
+        int temperat = int.Parse(Console.ReadLine());
+
+        if (temperat < 45)
+            Console.WriteLine($"Холодный");
+        else if (temperat <= 75)
+            Console.WriteLine($"Нормальная нагрузка");
+        else
+            Console.WriteLine($"Троттлинг/перегрев");
+    }
+}
+```
+
+> * №95. Ввести остаток срока годности продукта в днях. Вывести: «Срочно употребить» (≤2), «Нормально» (3-30), «Длительное хранение» (>30).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите остаток срока годности: ");
+        int days = int.Parse(Console.ReadLine());
+
+        if (days <= 2)
+            Console.WriteLine($"Срочно употребить");
+        else if (days <= 30)
+            Console.WriteLine($"Нормально");
+        else
+            Console.WriteLine($"Длительное хранение");
+    }
+}
+```
+
+> * №96. Ввести сумму кредита и срок. Рассчитать процентную ставку в зависимости от срока (до года, до трех лет, свыше трех лет).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите сумму кредита: ");
+        double credit = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите срок в годах: ");
+        int years = int.Parse(Console.ReadLine());
+
+        double stavka;
+
+        if (years <= 1)
+            stavka = 10;
+        else if (years <= 3)
+            stavka = 15;
+        else
+            stavka = 25;
+
+        Console.WriteLine($"Сумма кредита: {credit} руб.");
+        Console.WriteLine($"Процентная ставка: {stavka}%");
+    }
+}
+```
+
+> * №97. Ввести частоту обновления монитора (Гц). Определить: офис (60-75), базовый игровой (120-144), киберспорт (165+).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите частоту монитора: ");
+        int hz = int.Parse(Console.ReadLine());
+
+        if (hz >= 60 && hz <= 75)
+            Console.WriteLine($"Офис");
+        else if (hz >= 120 && hz <= 144)
+            Console.WriteLine($"Базовый игровой");
+        else if (hz >= 165)
+            Console.WriteLine($"Киберспорт");
+        else
+            Console.WriteLine($"Другая частота");
+    }
+}
+```
+
+> * №98. Ввести расход топлива автомобиля на 100 км пути. Вывести вердикт: экономичный (<6 л), средний (6-10 л), прожорливый (>10 л).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите расход топлива: ");
+        double fuel = double.Parse(Console.ReadLine());
+
+        if (fuel < 6)
+            Console.WriteLine($"Экономичный");
+        else if (fuel <= 10)
+            Console.WriteLine($"Средний");
+        else
+            Console.WriteLine($"Прожорливый");
+    }
+}
+```
+
+> * №99. Ввести количество страниц книги. Классифицировать: брошюра (<48), повесть (48-150), роман (151-600), фолиант (>600).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите количество страниц: ");
+        int pages = int.Parse(Console.ReadLine());
+
+        if (pages < 48)
+            Console.WriteLine($"Брошюра");
+        else if (pages <= 150)
+            Console.WriteLine($"Повесть");
+        else if (pages <= 600)
+            Console.WriteLine($"Роман");
+        else
+            Console.WriteLine($"Фолиант");
+    }
+}
+```
+
+> * №100. Ввести число и проверить, попадает ли оно в интервалы [0;10], [20;30] или [50;100].
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if ((number >= 0 && number <= 10) ||
+            (number >= 20 && number <= 30) ||
+            (number >= 50 && number <= 100))
+        {
+            Console.WriteLine($"Число попадает в один из интервалов");
+        }
+        else
+        {
+            Console.WriteLine($"Число не попадает в интервалы");
+        }
+    }
+}
+```
