@@ -1675,3 +1675,577 @@ class Program
     }
 }
 ```
+
+> * №68. Ввести рейтинг шахматиста (Эло). Вывести ранг: любитель (<1400), разрядник (1400-1999), мастер (2000-2399), гроссмейстер (≥2400).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите рейтинг Эло: ");
+        int elo = int.Parse(Console.ReadLine());
+
+        if (elo < 1400)
+            Console.WriteLine($"Любитель");
+        else if (elo < 2000)
+            Console.WriteLine($"Разрядник");
+        else if (elo < 2400)
+            Console.WriteLine($"Мастер");
+        else
+            Console.WriteLine($"Гроссмейстер");
+    }
+}
+```
+
+> * №69. Ввести число и определить, сколькизначным оно является (однозначное, двузначное, трехзначное или более).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        number = Math.Abs(number);
+
+        if (number < 10)
+            Console.WriteLine($"Однозначное");
+        else if (number < 100)
+            Console.WriteLine($"Двузначное");
+        else if (number < 1000)
+            Console.WriteLine($"Трехзначное");
+        else
+            Console.WriteLine($"Более трехзначного");
+    }
+}
+```
+
+> * №70. Ввести дальность поездки на такси (км). Рассчитать тариф: до 5 км — 200 руб, от 5 до 15 км — 200 + 25 руб/км, свыше 15 км — 200 + 20 руб/км.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите расстояние: ");
+        double km = double.Parse(Console.ReadLine());
+
+        double price;
+
+        if (km <= 5)
+            price = 200;
+        else if (km <= 15)
+            price = 200 + (km - 5) * 25;
+        else
+            price = 200 + 10 * 25 + (km - 15) * 20;
+
+        Console.WriteLine($"Стоимость поездки: {price} руб.");
+    }
+}
+```
+
+> * №71. Ввести количество осадков за сутки (мм). Определить: без осадков (0), слабый дождь (0.1-4), умеренный (4.1-15), сильный ливень (>15).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите количество осадков: ");
+        double rain = double.Parse(Console.ReadLine());
+
+        if (rain == 0)
+            Console.WriteLine($"Без осадков");
+        else if (rain <= 4)
+            Console.WriteLine($"Слабый дождь");
+        else if (rain <= 15)
+            Console.WriteLine($"Умеренный");
+        else
+            Console.WriteLine($"Сильный ливень");
+    }
+}
+```
+
+> * №72. Ввести процент выполнения плана продаж. Вывести статус: план сорван (<70), удовлетворительно (70-99%), выполнен (100-119%), перевыполнен (≥120).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите процент выполнения плана: ");
+        int percent = int.Parse(Console.ReadLine());
+
+        if (percent < 70)
+            Console.WriteLine($"План сорван");
+        else if (percent < 100)
+            Console.WriteLine($"Удовлетворительно");
+        else if (percent < 120)
+            Console.WriteLine($"Выполнен");
+        else
+            Console.WriteLine($"Перевыполнен");
+    }
+}
+```
+
+> * №73. Даны три числа. Упорядочить их по возрастанию и вывести на консоль.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите A: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите B: ");
+        int b = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите C: ");
+        int c = int.Parse(Console.ReadLine());
+
+        if (a > b)
+        {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+
+        if (a > c)
+        {
+            int temp = a;
+            a = c;
+            c = temp;
+        }
+
+        if (b > c)
+        {
+            int temp = b;
+            b = c;
+            c = temp;
+        }
+
+        Console.WriteLine($"По возрастанию: {a}, {b}, {c}");
+    }
+}
+```
+
+> * №74. Дано число X. Вычислить значение кусочно-заданной функции: f(x)=x^2, если x>0; f(x)=0, если x=0; f(x)=−x, если x<0.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите X: ");
+        double x = double.Parse(Console.ReadLine());
+
+        double f;
+
+        if (x > 0)
+            f = x * x;
+        else if (x == 0)
+            f = 0;
+        else
+            f = -x;
+
+        Console.WriteLine($"f(x) = {f}");
+    }
+}
+```
+
+> * №75. Ввести октановое число бензина. Классифицировать: <92 — несоответствие стандарту, 92 — АИ-92, 95 — АИ-95, 98-100 — АИ-98/100, >100 — спорт/авиатопливо.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите октановое число бензина: ");
+        int octane = int.Parse(Console.ReadLine());
+
+        if (octane < 92)
+            Console.WriteLine($"Несоответствие стандарту");
+        else if (octane == 92)
+            Console.WriteLine($"АИ-92");
+        else if (octane == 95)
+            Console.WriteLine($"АИ-95");
+        else if (octane <= 100)
+            Console.WriteLine($"АИ-98/100");
+        else
+            Console.WriteLine($"Спорт/авиатопливо");
+    }
+}
+```
+
+> * №76. Ввести сумму покупок за месяц для начисления кешбэка: до 10 000 руб — 1%, до 50 000 руб — 3%, свыше 50 000 руб — 5%. Вывести сумму кешбэка.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите сумму покупок: ");
+        double sum = double.Parse(Console.ReadLine());
+
+        double cashback;
+
+        if (sum <= 10000)
+            cashback = sum * 0.01;
+        else if (sum <= 50000)
+            cashback = sum * 0.03;
+        else
+            cashback = sum * 0.05;
+
+        Console.WriteLine($"Кешбэк: {cashback} руб.");
+    }
+}
+```
+
+> * №77. Ввести глубину погружения аквалангиста (метры). Вывести зону: рекреационная (<40), техническая (40-100), глубоководная (>100).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите глубину погружения аквалангиста: ");
+        double depth = double.Parse(Console.ReadLine());
+
+        if (depth < 40)
+            Console.WriteLine($"Рекреационная зона");
+        else if (depth <= 100)
+            Console.WriteLine($"Техническая зона");
+        else
+            Console.WriteLine($"Глубоководная зона");
+    }
+}
+```
+
+> * №78. Ввести количество штрафных баллов водителя. Вывести: «Предупреждение» (1-5), «Временное ограничение» (6-10), «Лишение прав» (>10).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите количество штрафных баллов: ");
+        int points = int.Parse(Console.ReadLine());
+
+        if (points >= 1 && points <= 5)
+            Console.WriteLine($"Предупреждение");
+        else if (points <= 10)
+            Console.WriteLine($"Временное ограничение");
+        else if (points > 10)
+            Console.WriteLine($"Лишение прав");
+        else
+            Console.WriteLine($"Нарушений нет");
+    }
+}
+```
+
+> * №79. Ввести уровень кислотности почвы (pH). Определить: кислая (<6.0), нейтральная (6.0-7.2), щелочная (>7.2).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите pH: ");
+        double ph = double.Parse(Console.ReadLine());
+
+        if (ph < 6.0)
+            Console.WriteLine($"Кислая");
+        else if (ph <= 7.2)
+            Console.WriteLine($"Нейтральная");
+        else
+            Console.WriteLine($"Щелочная");
+    }
+}
+```
+
+> * №80. Ввести количество набранных очков в компьютерной игре. Присвоить медаль: Бронзовая (1000-2499), Серебряная (2500-4999), Золотая (5000+), иначе без медали.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите количество набранных очков: ");
+        int points = int.Parse(Console.ReadLine());
+
+        if (points >= 1000)
+            Console.WriteLine($"Бронзовая медаль");
+        else if (points >= 2500)
+            Console.WriteLine($"Серебряная медаль");
+        else if (points >= 5000)
+            Console.WriteLine($"Золотая медаль");
+        else
+            Console.WriteLine($"Без медали");
+    }
+}
+```
+
+> * №81. Ввести крепость напитка в градусах. Классифицировать: безалкогольный (0), слабоалкогольный (0.1-8), среднеалкогольный (8.1-25), крепкий (>25).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите крепость: ");
+        double degree = double.Parse(Console.ReadLine());
+
+        if (degree == 0)
+            Console.WriteLine($"Безалкогольный");
+        else if (degree <= 8)
+            Console.WriteLine($"Слабоалкогольный");
+        else if (degree <= 25)
+            Console.WriteLine($"Среднеалкогольный");
+        else
+            Console.WriteLine($"Крепкий");
+    }
+}
+```
+
+> * №82. Ввести показатель уровня шума в децибелах (дБ). Вывести вердикт: тихо (<40), норма (40-60), шумно (61-80), вредно для здоровья (>80).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите уровень шума: ");
+        int noise = int.Parse(Console.ReadLine());
+
+        if (noise < 40)
+            Console.WriteLine($"Тихо");
+        else if (noise <= 60)
+            Console.WriteLine($"Норма");
+        else if (noise <= 80)
+            Console.WriteLine($"Шумно");
+        else
+            Console.WriteLine($"Вредно для здоровья");
+    }
+}
+```
+
+> * №83. Ввести вес почтовой посылки (кг). Рассчитать категорию отправления: мелкий пакет (<2), стандартная (2-10), тяжеловесная (10.1-31.5), крупногабарит (>31.5).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите вес почтовой посылки: ");
+        double weight = double.Parse(Console.ReadLine());
+
+        if (weight < 2)
+            Console.WriteLine($"Мелкий пакет");
+        else if (weight <= 10)
+            Console.WriteLine($"Стандартная");
+        else if (weight <= 31.5)
+            Console.WriteLine($"Тяжеловесная");
+        else
+            Console.WriteLine($"Крупногабарит");
+    }
+}
+```
+
+> * №84. Ввести количество комнат в квартире. Вывести: студия/однокомнатная (1), двухкомнатная (2), трехкомнатная (3), многокомнатная (4+).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите количество комнат: ");
+        int rooms = int.Parse(Console.ReadLine());
+
+        if (rooms == 1)
+            Console.WriteLine($"Студия/однокомнатная");
+        else if (rooms == 2)
+            Console.WriteLine($"Двухкомнатная");
+        else if (rooms == 3)
+            Console.WriteLine($"Трехкомнатная");
+        else
+            Console.WriteLine($"Многокомнатная");
+    }
+}
+```
+
+> * №85. Ввести процент заряда повербанка. Вывести количество светящихся светодиодов на корпусе (1, 2, 3 или 4).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите заряд повербанка: ");
+        int charge = int.Parse(Console.ReadLine());
+
+        if (charge <= 25)
+            Console.WriteLine($"Светодиодов: 1");
+        else if (charge <= 50)
+            Console.WriteLine($"Светодиодов: 2");
+        else if (charge <= 75)
+            Console.WriteLine($"Светодиодов: 3");
+        else
+            Console.WriteLine($"Светодиодов: 4");
+    }
+}
+```
+
+> * №86. Ввести выслугу лет военнослужащего. Вывести процент пенсионной надбавки.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите выслугу лет: ");
+        int years = int.Parse(Console.ReadLine());
+
+        if (years < 5)
+            Console.WriteLine($"Надбавка: 5%");
+        else if (years <= 10)
+            Console.WriteLine($"Надбавка: 10%");
+        else
+            Console.WriteLine($"Надбавка: 15%");
+    }
+}
+```
+
+> * №87. Ввести время отклика сервера (пинг в мс). Вывести: идеальный (<20), хороший (20-60), посредственный (61-120), плохой (>120).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите пинг: ");
+        int ping = int.Parse(Console.ReadLine());
+
+        if (ping < 20)
+            Console.WriteLine($"Идеальный");
+        else if (ping <= 60)
+            Console.WriteLine($"Хороший");
+        else if (ping <= 120)
+            Console.WriteLine($"Посредственный");
+        else
+            Console.WriteLine($"Плохой");
+    }
+}
+```
+
+> * №88. Ввести концентрацию CO2 в помещении (ppm). Вывести вердикт: норма (<800), душно (800-1200), проветрить немедленно (>1200).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите концентрацию CO2: ");
+        int co2 = int.Parse(Console.ReadLine());
+
+        if (co2 < 800)
+            Console.WriteLine($"Норма");
+        else if (co2 <= 1200)
+            Console.WriteLine($"Душно");
+        else
+            Console.WriteLine($"Проветрить немедленно");
+    }
+}
+```
+
+> * №89. Ввести количество пройденных шагов за день. Вывести: гиподинамия (<5000), норма (5000-9999), активный день (10000-14999), рекорд (>15000).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите количество шагов: ");
+        int steps = int.Parse(Console.ReadLine());
+
+        if (steps < 5000)
+            Console.WriteLine($"Гиподинамия");
+        else if (steps < 10000)
+            Console.WriteLine($"Норма");
+        else if (steps < 15000)
+            Console.WriteLine($"Активный день");
+        else
+            Console.WriteLine($"Рекорд");
+    }
+}
+```
+
+> * №90. Ввести диаметр автомобильного колесного диска в дюймах. Определить класс: малолитражки (13-14), компактные авто (15-16), кроссоверы/бизнес (17-19), внедорожники/спорт (20+).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите диаметр диска: ");
+        int disk = int.Parse(Console.ReadLine());
+
+        if (disk <= 14)
+            Console.WriteLine($"Малолитражки");
+        else if (disk <= 16)
+            Console.WriteLine($"Компактные авто");
+        else if (disk <= 19)
+            Console.WriteLine($"Кроссоверы/бизнес");
+        else
+            Console.WriteLine($"Внедорожники/спорт");
+    }
+}
+```
