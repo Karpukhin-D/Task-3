@@ -3263,23 +3263,508 @@ class Program
 {
     static void Main()
     {
-        Console.Write("Введите X1: ");
+        Console.Write("Введите x1: ");
         int x1 = int.Parse(Console.ReadLine());
 
-        Console.Write("Введите Y1: ");
+        Console.Write("Введите y1: ");
         int y1 = int.Parse(Console.ReadLine());
 
-        Console.Write("Введите X2: ");
+        Console.Write("Введите x2: ");
         int x2 = int.Parse(Console.ReadLine());
 
-        Console.Write("Введите Y2: ");
+        Console.Write("Введите y2: ");
         int y2 = int.Parse(Console.ReadLine());
 
-        if (x1 == x2 || y1 == y2 ||
-            Math.Abs(x1 - x2) == Math.Abs(y1 - y2))
-            Console.WriteLine($"Ферзь угрожает фигуре");
+        if ((Math.Abs(x1 - x2) == 1 && Math.Abs(y1 - y2) == 2) ||
+            (Math.Abs(x1 - x2) == 2 && Math.Abs(y1 - y2) == 1))
+            Console.WriteLine($"Конь может пойти");
         else
-            Console.WriteLine($"Ферзь не угрожает фигуре");
+            Console.WriteLine($"Конь не может пойти");
+    }
+}
+```
+
+> * №132. Для двух клеток шахматной доски проверить, одинакового ли они цвета.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите x1: ");
+        int x1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите y1: ");
+        int y1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите x2: ");
+        int x2 = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите y2: ");
+        int y2 = int.Parse(Console.ReadLine());
+
+        if ((x1 + y1) % 2 == (x2 + y2) % 2)
+            Console.WriteLine($"Клетки одного цвета");
+        else
+            Console.WriteLine($"Клетки разных цветов");
+    }
+}
+```
+
+> * №133. Ввести рост и вес кандидата в космонавты. Проверить соответствие: рост от 160 до 190 см И вес от 50 до 90 кг.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите рост: ");
+        int height = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите вес: ");
+        int weight = int.Parse(Console.ReadLine());
+
+        if (height >= 160 && height <= 190 &&
+            weight >= 50 && weight <= 90)
+            Console.WriteLine($"Кандидат подходит");
+        else
+            Console.WriteLine($"Кандидат не подходит");
+    }
+}
+```
+
+> * №134. Дано натуральное число N. Проверить, является ли оно четным двузначным числом.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number >= 10 && number <= 99 && number % 2 == 0)
+            Console.WriteLine($"Число четное и двузначное");
+        else
+            Console.WriteLine($"Условие не выполнено");
+    }
+}
+```
+
+> * №135. Дано натуральное число. Проверить, является ли оно нечетным трехзначным числом.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number >= 100 && number <= 999 && number % 2 != 0)
+            Console.WriteLine($"Число нечетное и трехзначное");
+        else
+            Console.WriteLine($"Условие не выполнено");
+    }
+}
+```
+
+> * №136. Ввести результаты двух экзаменов (математика и информатика). Абитуриент зачислен, если сумма баллов ≥150 И по каждому предмету не менее 50 баллов.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите баллы по математике: ");
+        int math = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите баллы по информатике: ");
+        int informatics = int.Parse(Console.ReadLine());
+
+        if (math + informatics >= 150 &&
+            math >= 50 && informatics >= 50)
+            Console.WriteLine($"Абитуриент зачислен");
+        else
+            Console.WriteLine($"Абитуриент не зачислен");
+    }
+}
+```
+
+> * №137. Проверить, лежит ли точка с координатами (X,Y) в круговом кольце с внутренним радиусом R1 и внешним R2.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите X: ");
+        double x = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите Y: ");
+        double y = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите R1: ");
+        double r1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите R2: ");
+        double r2 = double.Parse(Console.ReadLine());
+
+        double distance = x * x + y * y;
+
+        if (distance >= r1 * r1 && distance <= r2 * r2)
+            Console.WriteLine($"Точка находится в кольце");
+        else
+            Console.WriteLine($"Точка не находится в кольце");
+    }
+}
+```
+
+> * №138. Ввести статус билета (true/false) и наличие багажа. Вывести: требуется ли дополнительная оплата багажа.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Билет действителен? ");
+        bool ticket = bool.Parse(Console.ReadLine());
+
+        Console.Write("Есть багаж? ");
+        bool baggage = bool.Parse(Console.ReadLine());
+
+        if (ticket && baggage)
+            Console.WriteLine($"Требуется дополнительная оплата багажа");
+        else
+            Console.WriteLine($"Дополнительная оплата не требуется");
+    }
+}
+```
+
+> * №139. Дано четырехзначное число. Проверить, читается ли оно одинаково слева направо и справа налево (палиндром).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите четырехзначное число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        int a = number / 1000;
+        int b = number / 100 % 10;
+        int c = number / 10 % 10;
+        int d = number % 10;
+
+        if (a == d && b == c)
+            Console.WriteLine($"Число является палиндромом");
+        else
+            Console.WriteLine($"Число не является палиндромом");
+    }
+}
+```
+
+> * №140. Ввести напряжение сети (Вольты) и частоту (Гц). Норма: 220 В±10 И частота 50 Гц±1 Гц. Вывести статус стабильности сети.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите напряжение: ");
+        double voltage = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите частоту: ");
+        double chast = double.Parse(Console.ReadLine());
+
+        if (voltage >= 210 && voltage <= 230 &&
+            chast >= 49 && chast <= 51)
+            Console.WriteLine($"Сеть стабильна");
+        else
+            Console.WriteLine($"Сеть нестабильна");
+    }
+}
+```
+
+> * №141. Ввести признак наличия прав (bool), страховки (bool) и трезвости водителя (bool). Разрешить выезд только при соблюдении всех трех факторов.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Есть права? ");
+        bool license = bool.Parse(Console.ReadLine());
+
+        Console.Write("Есть страховка? ");
+        bool strahovka = bool.Parse(Console.ReadLine());
+
+        Console.Write("Водитель трезв? ");
+        bool trezv = bool.Parse(Console.ReadLine());
+
+        if (license && strahovka && trezv)
+            Console.WriteLine($"Выезд разрешен");
+        else
+            Console.WriteLine($"Выезд запрещен");
+    }
+}
+```
+
+> * №142. Проверить, делится ли введенное число на 4 ИЛИ на 7, но НЕ делится на 28.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if ((number % 4 == 0 || number % 7 == 0) &&
+            number % 28 != 0)
+            Console.WriteLine($"Условие выполнено");
+        else
+            Console.WriteLine($"Условие не выполнено");
+    }
+}
+```
+
+> * №143. Ввести текущий месяц и температуру. Вывести аномалию, если месяц летний (6, 7, 8), а температура ниже нуля.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите месяц: ");
+        int month = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите температуру: ");
+        int temperature = int.Parse(Console.ReadLine());
+
+        if ((month == 6 || month == 7 || month == 8) &&
+            temperature < 0)
+            Console.WriteLine($"Обнаружена аномалия");
+        else
+            Console.WriteLine($"Аномалии нет");
+    }
+}
+```
+
+> * №144. Даны три логические переменные A, B, C. Реализовать проверку формулы мажоритарного клапана: «Истинно, если хотя бы две из трех переменных истинны».
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите A: ");
+        bool A = bool.Parse(Console.ReadLine());
+
+        Console.Write("Введите B: ");
+        bool B = bool.Parse(Console.ReadLine());
+
+        Console.Write("Введите C: ");
+        bool C = bool.Parse(Console.ReadLine());
+
+        if ((A && B) || (A && C) || (B && C))
+            Console.WriteLine($"Истинно");
+        else
+            Console.WriteLine($"Ложно");
+    }
+}
+```
+
+> * №145. Даны три вещественных числа. Проверить, могут ли они являться длинами сторон тупоугольного треугольника.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите a: ");
+        double a = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите b: ");
+        double b = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите c: ");
+        double c = double.Parse(Console.ReadLine());
+
+        if (a + b > c && a + c > b && b + c > a)
+        {
+            if (a * a + b * b < c * c ||
+                a * a + c * c < b * b ||
+                b * b + c * c < a * a)
+                Console.WriteLine($"Треугольник тупоугольный");
+            else
+                Console.WriteLine($"Треугольник не тупоугольный");
+        }
+        else
+            Console.WriteLine($"Это не треугольник");
+    }
+}
+```
+
+> * №146. Даны три вещественных числа. Проверить, могут ли они являться длинами сторон остроугольного треугольника.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите a: ");
+        double a = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите b: ");
+        double b = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите c: ");
+        double c = double.Parse(Console.ReadLine());
+
+        if (a + b > c && a + c > b && b + c > a &&
+            a * a + b * b > c * c &&
+            a * a + c * c > b * b &&
+            b * b + c * c > a * a)
+            Console.WriteLine($"Треугольник остроугольный");
+        else
+            Console.WriteLine($"Треугольник не остроугольный");
+    }
+}
+```
+
+> * №147. Ввести время (часы и минуты). Проверить, попадает ли указанное время в интервал тихого часа (с 13:00 до 15:00).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите часы: ");
+        int hours = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите минуты: ");
+        int minutes = int.Parse(Console.ReadLine());
+
+        int time = hours * 60 + minutes;
+
+        if (time >= 13 * 60 && time <= 15 * 60)
+            Console.WriteLine($"Сейчас тихий час");
+        else
+            Console.WriteLine($"Сейчас не тихий час");
+    }
+}
+```
+
+> * №148. Проверить, что все цифры введенного трехзначного числа различны между собой.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите трехзначное число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number >= 100 && number <= 999)
+        {
+            int a = number / 100;
+            int b = number / 10 % 10;
+            int c = number % 10;
+
+            if (a != b && a != c && b != c)
+            {
+                Console.WriteLine($"Все цифры разные.");
+            }
+            else
+            {
+                Console.WriteLine($"Есть одинаковые цифры.");
+            }
+        }
+        else
+        {
+            Console.WriteLine($"Ошибка: нужно ввести только трехзначное число.");
+        }
+    }
+}
+```
+
+> * №149. Ввести логическое значение двух кнопок пульта. Станок запускается только при одновременном зажатии обеих кнопок (защита от случайного пуска).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Первая кнопка нажата? ");
+        bool button1 = bool.Parse(Console.ReadLine());
+
+        Console.Write("Вторая кнопка нажата? ");
+        bool button2 = bool.Parse(Console.ReadLine());
+
+        if (button1 && button2)
+            Console.WriteLine($"Станок запускается");
+        else
+            Console.WriteLine($"Станок не запускается");
+    }
+}
+```
+
+> * №150. Проверить, лежит ли точка (X,Y) ниже прямой Y=2X+1 и выше параболы Y=X2.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите X: ");
+        double x = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите Y: ");
+        double y = double.Parse(Console.ReadLine());
+
+        if (y < 2 * x + 1 && y > x * x)
+            Console.WriteLine($"Точка находится в нужной области");
+        else
+            Console.WriteLine($"Точка не находится в нужной области");
     }
 }
 ```
