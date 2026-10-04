@@ -2495,3 +2495,398 @@ class Program
     }
 }
 ```
+
+### Раздел 3. Составные логические условия &&, ||, !
+---
+
+> * №101. Дано целое число. Проверить, принадлежит ли оно числовому отрезку [10;50].
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number >= 10 && number <= 50)
+            Console.WriteLine($"Число принадлежит отрезку");
+        else
+            Console.WriteLine($"Число не принадлежит отрезку");
+    }
+}
+```
+
+> * №102. Проверить, является ли введенное целое число положительным и четным одновременно.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number > 0 && number % 2 == 0)
+            Console.WriteLine($"Число положительное и четное");
+        else
+            Console.WriteLine($"Условие не выполнено");
+    }
+}
+```
+
+> * №103. Проверить, лежит ли число вне диапазона [−10;10].
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number < -10 || number > 10)
+            Console.WriteLine($"Число вне диапазона");
+        else
+            Console.WriteLine($"Число внутри диапазона");
+    }
+}
+```
+
+> * №104. Ввести логин и пароль пользователя. Вывести «Успех», если логин равен admin и пароль secret.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите логин: ");
+        string login = Console.ReadLine();
+
+        Console.Write("Введите пароль: ");
+        string password = Console.ReadLine();
+
+        if (login == "admin" && password == "secret")
+            Console.WriteLine($"Успех");
+        else
+            Console.WriteLine($"Ошибка");
+    }
+}
+```
+
+> * №105. Проверить, является ли введенный год високосным (делится на 4, но не на 100, либо делится на 400).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите год: ");
+        int year = int.Parse(Console.ReadLine());
+
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+            Console.WriteLine($"Год високосный");
+        else
+            Console.WriteLine($"Год не високосный");
+    }
+}
+```
+
+> * №106. Даны координаты точки (X,Y). Определить, попадает ли точка в I координатную четверть (X>0 и Y>0).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите X: ");
+        int x = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите Y: ");
+        int y = int.Parse(Console.ReadLine());
+
+        if (x > 0 && y > 0)
+            Console.WriteLine($"Точка находится в I четверти");
+        else
+            Console.WriteLine($"Точка не находится в I четверти");
+    }
+}
+```
+
+> * №107. Определить, попадает ли точка (X,Y) во II четверть плоскости.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите X: ");
+        int x = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите Y: ");
+        int y = int.Parse(Console.ReadLine());
+
+        if (x < 0 && y > 0)
+            Console.WriteLine($"Точка находится во II четверти");
+        else
+            Console.WriteLine($"Точка не находится во II четверти");
+    }
+}
+```
+
+> * №108. Определить, попадает ли точка (X,Y) в III четверть плоскости.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите X: ");
+        int x = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите Y: ");
+        int y = int.Parse(Console.ReadLine());
+
+        if (x < 0 && y < 0)
+            Console.WriteLine($"Точка находится в III четверти");
+        else
+            Console.WriteLine($"Точка не находится в III четверти");
+    }
+}
+```
+
+> * №109. Определить, попадает ли точка (X,Y) в IV четверть плоскости.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите X: ");
+        int x = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите Y: ");
+        int y = int.Parse(Console.ReadLine());
+
+        if (x > 0 && y < 0)
+            Console.WriteLine($"Точка находится в IV четверти");
+        else
+            Console.WriteLine($"Точка не находится в IV четверти");
+    }
+}
+```
+
+> * №110. Даны три стороны A, B, C. Проверить, является ли треугольник прямоугольным (теорема Пифагора).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите A: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите B: ");
+        int b = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите C: ");
+        int c = int.Parse(Console.ReadLine());
+
+        if (a * a + b * b == c * c ||
+            a * a + c * c == b * b ||
+            b * b + c * c == a * a)
+            Console.WriteLine($"Треугольник прямоугольный");
+        else
+            Console.WriteLine($"Треугольник не прямоугольный");
+    }
+}
+```
+
+> * №111. Даны три стороны. Проверить, является ли треугольник равнобедренным.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите A: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите B: ");
+        int b = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите C: ");
+        int c = int.Parse(Console.ReadLine());
+
+        if (a == b || a == c || b == c)
+            Console.WriteLine($"Треугольник равнобедренный");
+        else
+            Console.WriteLine($"Треугольник не равнобедренный");
+    }
+}
+```
+
+> * №112. Ввести возраст и стаж вождения. Разрешить аренду каршеринга бизнес-класса, если возраст ≥23 лет И стаж ≥3 лет.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите возраст: ");
+        int age = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите стаж: ");
+        int stazh = int.Parse(Console.ReadLine());
+
+        if (age >= 23 && stazh >= 3)
+            Console.WriteLine($"Аренда разрешена");
+        else
+            Console.WriteLine($"Аренда запрещена");
+    }
+}
+```
+
+> * №113. Проверить, делится ли число одновременно на 3 и на 5 без остатка.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number % 3 == 0 && number % 5 == 0)
+            Console.WriteLine($"Число делится на 3 и 5");
+        else
+            Console.WriteLine($"Число не подходит");
+    }
+}
+```
+
+> * №114. Проверить, является ли число трехзначным и оканчивается ли оно на цифру 5.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number >= 100 && number <= 999 && number % 10 == 5)
+            Console.WriteLine($"Условие выполнено");
+        else
+            Console.WriteLine($"Условие не выполнено");
+    }
+}
+```
+
+> * №115. Даны три числа. Проверить, упорядочены ли они строго по возрастанию (A<B<C).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите A: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите B: ");
+        int b = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите C: ");
+        int c = int.Parse(Console.ReadLine());
+
+        if (a < b && b < c)
+            Console.WriteLine($"Числа упорядочены по возрастанию");
+        else
+            Console.WriteLine($"Числа не упорядочены");
+    }
+}
+```
+
+> * №116. Проверить, верно ли, что среди трех введенных чисел есть хотя бы одно четное.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите A: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите B: ");
+        int b = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите C: ");
+        int c = int.Parse(Console.ReadLine());
+
+        if (a % 2 == 0 || b % 2 == 0 || c % 2 == 0)
+            Console.WriteLine($"Есть хотя бы одно четное число");
+        else
+            Console.WriteLine($"Четных чисел нет");
+    }
+}
+```
+
+> * №117. Проверить, верно ли, что среди трех чисел ровно одно равно нулю.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите A: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите B: ");
+        int b = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите C: ");
+        int c = int.Parse(Console.ReadLine());
+
+        if ((a == 0 && b != 0 && c != 0) ||
+            (a != 0 && b == 0 && c != 0) ||
+            (a != 0 && b != 0 && c == 0))
+            Console.WriteLine($"Ровно одно число равно нулю");
+        else
+            Console.WriteLine($"Условие не выполнено");
+    }
+}
+```
