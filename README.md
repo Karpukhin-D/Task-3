@@ -2890,3 +2890,396 @@ class Program
     }
 }
 ```
+
+> * №118. Ввести температуру и влажность. Вывести предупреждение о гололедице, если температура ≤0∘C И влажность >85.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите температуру: ");
+        double temperature = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите влажность: ");
+        double humidity = double.Parse(Console.ReadLine());
+
+        if (temperature <= 0 && humidity > 85)
+            Console.WriteLine($"Предупреждение: Возможна гололедица!");
+        else
+            Console.WriteLine($"Условие гололедицы не выполнено");
+    }
+}
+```
+
+> * №119. Даны координаты точки (X,Y). Проверить, лежит ли точка внутри круга радиуса R с центром в начале координат (x2+y2≤R2).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите X: ");
+        double x = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите Y: ");
+        double y = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите R: ");
+        double r = double.Parse(Console.ReadLine());
+
+        if (x * x + y * y <= r * r)
+            Console.WriteLine($"Точка находится внутри круга");
+        else
+            Console.WriteLine($"Точка находится вне круга");
+    }
+}
+```
+
+> * №120. Даны координаты точки (X,Y). Проверить, лежит ли точка внутри прямоугольника со сторонами, параллельными осям, заданного углами (X1,Y1) и (X2,Y2).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите X точки: ");
+        double x = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите Y точки: ");
+        double y = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите X1: ");
+        double x1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите Y1: ");
+        double y1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите X2: ");
+        double x2 = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите Y2: ");
+        double y2 = double.Parse(Console.ReadLine());
+
+        double minX = Math.Min(x1, x2);
+        double maxX = Math.Max(x1, x2);
+        double minY = Math.Min(y1, y2);
+        double maxY = Math.Max(y1, y2);
+
+        if (x >= minX && x <= maxX &&
+            y >= minY && y <= maxY)
+            Console.WriteLine($"Точка находится внутри прямоугольника");
+        else
+            Console.WriteLine($"Точка находится вне прямоугольника");
+    }
+}
+```
+
+> * №121. Ввести день и месяц рождения. Проверить, корректна ли дата (например, день от 1 до 31, месяц от 1 до 12, с учетом длины месяцев).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите день: ");
+        int day = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите месяц: ");
+        int month = int.Parse(Console.ReadLine());
+
+        int daysInMonth = 0;
+
+        if (month == 2)
+            daysInMonth = 28;
+        else if (month == 4 || month == 6 || month == 9 || month == 11)
+            daysInMonth = 30;
+        else if (month >= 1 && month <= 12)
+            daysInMonth = 31;
+
+        if (day >= 1 && day <= daysInMonth)
+            Console.WriteLine($"Дата корректна");
+        else
+            Console.WriteLine($"Дата некорректна");
+    }
+}
+```
+
+> * №122. Ввести номер месяца. Проверить, относится ли он к зимнему периоду (12, 1 или 2).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер месяца: ");
+        int month = int.Parse(Console.ReadLine());
+
+        if (month == 12 || month == 1 || month == 2)
+            Console.WriteLine($"Это зимний месяц");
+        else
+            Console.WriteLine($"Это не зимний месяц");
+    }
+}
+```
+
+> * №123. Проверить, является ли четырехзначное число «счастливым билетом» (сумма первых двух цифр равна сумме двух последних).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите четырехзначное число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number >= 1000 && number <= 9999)
+        {
+            int first = number / 1000;
+            int second = number / 100 % 10;
+            int third = number / 10 % 10;
+            int fourth = number % 10;
+
+            if (first + second == third + fourth)
+                Console.WriteLine($"Билет счастливый");
+            else
+                Console.WriteLine($"Билет не счастливый");
+        }
+        else
+        {
+            Console.WriteLine($"Число не четырехзначное");
+        }
+    }
+}
+```
+
+> * №124. Ввести три числа. Проверить истинность высказывания: «Хотя бы одна пара чисел взаимно противоположна (A=−B)».
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите A: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите B: ");
+        int b = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите C: ");
+        int c = int.Parse(Console.ReadLine());
+
+        if (a == -b || a == -c || b == -c)
+            Console.WriteLine($"Есть взаимно противоположная пара");
+        else
+            Console.WriteLine($"Такой пары нет");
+    }
+}
+```
+
+> * №125. Пользователь вводит показания двух датчиков аварии. Сформировать тревогу, если сработал хотя бы один датчик И при этом включен тумблер защиты.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Сработал первый датчик? ");
+        bool sensor1 = bool.Parse(Console.ReadLine());
+
+        Console.Write("Сработал второй датчик? ");
+        bool sensor2 = bool.Parse(Console.ReadLine());
+
+        Console.Write("Тумблер защиты включен? ");
+        bool tumbler = bool.Parse(Console.ReadLine());
+
+        if ((sensor1 || sensor2) && tumbler)
+            Console.WriteLine($"ТРЕВОГА");
+        else
+            Console.WriteLine($"Тревоги нет");
+    }
+}
+```
+
+> * №126. Проверить, лежит ли число X строго между числами A и B (учесть, что A может быть больше B).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите A: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите B: ");
+        int b = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите X: ");
+        int x = int.Parse(Console.ReadLine());
+
+        if ((x > a && x < b) || (x > b && x < a))
+            Console.WriteLine($"X находится между A и B");
+        else
+            Console.WriteLine($"X не находится между A и B");
+    }
+}
+```
+
+> * №127. Даны два целых числа. Проверить, имеют ли они одинаковый знак (оба положительные или оба отрицательные).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите A: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите B: ");
+        int b = int.Parse(Console.ReadLine());
+
+        if ((a > 0 && b > 0) || (a < 0 && b < 0))
+            Console.WriteLine($"Числа имеют одинаковый знак");
+        else
+            Console.WriteLine($"Числа имеют разные знаки");
+    }
+}
+```
+
+> * №128. Даны шахматные координаты двух клеток (x1,y1) и (x2,y2) от 1 до 8. Определить, угрожает ли ладья с первой клетки фигуре на второй клетке (совпадает либо строка, либо столбец).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите X1: ");
+        int x1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите Y1: ");
+        int y1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите X2: ");
+        int x2 = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите Y2: ");
+        int y2 = int.Parse(Console.ReadLine());
+
+        if (x1 == x2 || y1 == y2)
+            Console.WriteLine($"Ладья угрожает фигуре");
+        else
+            Console.WriteLine($"Ладья не угрожает фигуре");
+    }
+}
+```
+
+> * №129. Для двух клеток шахматной доски определить, угрожает ли слон (разность координат по модулю одинакова).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите X1: ");
+        int x1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите Y1: ");
+        int y1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите X2: ");
+        int x2 = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите Y2: ");
+        int y2 = int.Parse(Console.ReadLine());
+
+        if (Math.Abs(x1 - x2) == Math.Abs(y1 - y2))
+            Console.WriteLine($"Слон угрожает фигуре");
+        else
+            Console.WriteLine($"Слон не угрожает фигуре");
+    }
+}
+```
+
+> * №130. Для двух клеток шахматной доски определить, угрожает ли ферзь (объединение логики ладьи и слона).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите X1: ");
+        int x1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите Y1: ");
+        int y1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите X2: ");
+        int x2 = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите Y2: ");
+        int y2 = int.Parse(Console.ReadLine());
+
+        if (x1 == x2 || y1 == y2 ||
+            Math.Abs(x1 - x2) == Math.Abs(y1 - y2))
+            Console.WriteLine($"Ферзь угрожает фигуре");
+        else
+            Console.WriteLine($"Ферзь не угрожает фигуре");
+    }
+}
+```
+
+> * №131. Для двух клеток определить, может ли конь пойти с одной на другую.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите X1: ");
+        int x1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите Y1: ");
+        int y1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите X2: ");
+        int x2 = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите Y2: ");
+        int y2 = int.Parse(Console.ReadLine());
+
+        if (x1 == x2 || y1 == y2 ||
+            Math.Abs(x1 - x2) == Math.Abs(y1 - y2))
+            Console.WriteLine($"Ферзь угрожает фигуре");
+        else
+            Console.WriteLine($"Ферзь не угрожает фигуре");
+    }
+}
+```
