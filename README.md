@@ -4947,3 +4947,246 @@ class Program
     }
 }
 ```
+
+> * №191. Ввести букву ноты (C, D, E, F, G, A, B). Вывести русское словесное обозначение (До, Ре, Ми, Фа, Соль, Ля, Си).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите букву ноты: ");
+        char note = char.Parse(Console.ReadLine().ToUpper());
+
+        switch (note)
+        {
+            case 'C': Console.WriteLine($"До"); break;
+            case 'D': Console.WriteLine($"Ре"); break;
+            case 'E': Console.WriteLine($"Ми"); break;
+            case 'F': Console.WriteLine($"Фа"); break;
+            case 'G': Console.WriteLine($"Соль"); break;
+            case 'A': Console.WriteLine($"Ля"); break;
+            case 'B': Console.WriteLine($"Си"); break;
+            default: Console.WriteLine($"Ошибка."); break;
+        }
+    }
+}
+```
+
+> * №192. Ввести номер типа кузова автомобиля (1 — Седан, 2 — Хэтчбек, 3 — Универсал, 4 — Купе, 5 — Внедорожник). Вывести описание вместимости и компоновки.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер кузова: ");
+        int kuzov = int.Parse(Console.ReadLine());
+
+        switch (kuzov)
+        {
+            case 1: Console.WriteLine($"Седан — отдельный багажник, обычно 4 двери"); break;
+            case 2: Console.WriteLine($"Хэтчбек — багажник объединен с салоном"); break;
+            case 3: Console.WriteLine($"Универсал — большой багажник и просторный салон"); break;
+            case 4: Console.WriteLine($"Купе — обычно две двери и спортивная компоновка"); break;
+            case 5: Console.WriteLine($"Внедорожник — высокий кузов и большой салон"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №193. Ввести код типа датчика охранной сигнализации: M (движение), D (открытие двери), S (дым), W (протечка воды). Вывести сообщение о типе угрозы.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите код датчика охранной сигнализации: ");
+        char sensor = char.Parse(Console.ReadLine().ToUpper());
+
+        switch (sensor)
+        {
+            case 'M': Console.WriteLine($"Обнаружено движение"); break;
+            case 'D': Console.WriteLine($"Обнаружено открытие двери"); break;
+            case 'S': Console.WriteLine($"Обнаружен дым"); break;
+            case 'W': Console.WriteLine($"Обнаружена протечка воды"); break;
+            default: Console.WriteLine($"Неизвестный датчик"); break;
+        }
+    }
+}
+```
+
+> * №194. Ввести номер фазы Луны (1 — Новолуние, 2 — Первая четверть, 3 — Полнолуние, 4 — Последняя четверть). Вывести характеристику фазы.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер фазы Луны: ");
+        int phase = int.Parse(Console.ReadLine());
+
+        switch (phase)
+        {
+            case 1: Console.WriteLine($"Новолуние - Луна почти не видна"); break;
+            case 2: Console.WriteLine($"Первая четверть — видна половина Луны"); break;
+            case 3: Console.WriteLine($"Полнолуние — виден весь диск Луны"); break;
+            case 4: Console.WriteLine($"Последняя четверть - видна половина Луны"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №195. Ввести символ разделителя пути в операционной системе (/ или \). Вывести, к какому семейству ОС относится разделитель (Unix/Linux или Windows).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите разделитель пути: ");
+        string razdelitel = Console.ReadLine();
+
+        switch (razdelitel)
+        {
+            case "/": Console.WriteLine($"Unix/Linux"); break;
+            case "\\": Console.WriteLine($"Windows"); break;
+            default: Console.WriteLine($"Неизвестный разделитель."); break;
+        }
+    }
+}
+```
+
+> * №196. Ввести номер поколения мобильной связи (2, 3, 4, 5). Вывести название стандарта (GPRS/EDGE, UMTS/HSPA, LTE, NR) и типичную скорость.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите поколение связи: ");
+        int pokolenie = int.Parse(Console.ReadLine());
+
+        switch (pokolenie)
+        {
+            case 2: Console.WriteLine($"GPRS/EDGE — низкая скорость"); break;
+            case 3: Console.WriteLine($"UMTS/HSPA — средняя скорость"); break;
+            case 4: Console.WriteLine($"LTE — высокая скорость"); break;
+            case 5: Console.WriteLine($"NR — очень высокая скорость"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №197. Ввести номер порта протокола (21, 22, 25, 80, 443). Вывести название сетевого протокола (FTP, SSH, SMTP, HTTP, HTTPS).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер порта протокола: ");
+        int port = int.Parse(Console.ReadLine());
+
+        switch (port)
+        {
+            case 21: Console.WriteLine($"FTP"); break;
+            case 22: Console.WriteLine($"SSH"); break;
+            case 25: Console.WriteLine($"SMTP"); break;
+            case 80: Console.WriteLine($"HTTP"); break;
+            case 443: Console.WriteLine($"HTTPS"); break;
+            default: Console.WriteLine($"Неизвестный порт."); break;
+        }
+    }
+}
+```
+
+> * №198. Ввести код режима стиральной машины (1 — Хлопок, 2 — Синтетика, 3 — Шерсть, 4 — Быстрая 15 мин, 5 — Отжим). Вывести температуру стирки и скорость отжима.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите код режима стиральной машины: ");
+        int mode = int.Parse(Console.ReadLine());
+
+        switch (mode)
+        {
+            case 1: Console.WriteLine($"Хлопок — 40°C, 1000 об/мин."); break;
+            case 2: Console.WriteLine($"Синтетика — 30°C, 800 об/мин."); break;
+            case 3: Console.WriteLine($"Шерсть — 30°C, 600 об/мин."); break;
+            case 4: Console.WriteLine($"Быстрая стирка 15 мин — 30°C, 800 об/мин."); break;
+            case 5: Console.WriteLine($"Отжим — без стирки, 1000 об/мин."); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №199. Ввести код тарифной зоны электроэнергии (1 — Пик, 2 — Полупик, 3 — Ночь). Вывести стоимость киловатт-часа.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите код тарифной зоны: ");
+        int zone = int.Parse(Console.ReadLine());
+
+        switch (zone)
+        {
+            case 1: Console.WriteLine($"Пик — 7 рублей за кВт-ч."); break;
+            case 2: Console.WriteLine($"Полупик — 5 рублей за кВт-ч."); break;
+            case 3: Console.WriteLine($"Ночь — 3 рубля за кВт-ч."); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №200. Ввести код состояния потока выполнения в C# (Running, Suspended, Stopped, Aborted). Вывести пояснение жизненного цикла потока.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите код состояния потока выполнения в C#: ");
+        string state = Console.ReadLine();
+
+        switch (state)
+        {
+            case "Running": Console.WriteLine($"Поток выполняется"); break;
+            case "Suspended": Console.WriteLine($"Поток приостановлен"); break;
+            case "Stopped": Console.WriteLine($"Поток остановлен"); break;
+            case "Aborted": Console.WriteLine($"Выполнение потока прервано"); break;
+            default: Console.WriteLine($"Неизвестное состояние"); break;
+        }
+    }
+}
+```
