@@ -4050,3 +4050,489 @@ class Program
     }
 }
 ```
+
+> * №159. Ввести номер геометрической фигуры (1 — круг, 2 — прямоугольник, 3 — треугольник). Запросить соответствующие параметры фигуры и вычислить ее площадь.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine($"1. Круг");
+        Console.WriteLine($"2. Прямоугольник");
+        Console.WriteLine($"3. Треугольник");
+
+        Console.Write("Выберите фигуру: ");
+        int choice = int.Parse(Console.ReadLine());
+
+        switch (choice)
+        {
+            case 1:
+                Console.Write("Введите радиус: ");
+                double r = double.Parse(Console.ReadLine());
+                Console.WriteLine($"{Math.PI * r * r}");
+                break;
+
+            case 2:
+                Console.Write("Введите длину: ");
+                double a = double.Parse(Console.ReadLine());
+
+                Console.Write("Введите ширину: ");
+                double b = double.Parse(Console.ReadLine());
+
+                Console.WriteLine($"{a * b}");
+                break;
+
+            case 3:
+                Console.Write("Введите основание: ");
+                double c = double.Parse(Console.ReadLine());
+
+                Console.Write("Введите высоту: ");
+                double h = double.Parse(Console.ReadLine());
+
+                Console.WriteLine($"{c * h / 2}");
+                break;
+
+            default:
+                Console.WriteLine($"Ошибка");
+                break;
+        }
+    }
+}
+```
+
+> * №160. Ввести номер масти игральной карты (1 — пики, 2 — трефы, 3 — бубны, 4 — червы). Вывести название масти.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер масти: ");
+        int mast = int.Parse(Console.ReadLine());
+
+        switch (mast)
+        {
+            case 1: Console.WriteLine($"Пики"); break;
+            case 2: Console.WriteLine($"Трефы"); break;
+            case 3: Console.WriteLine($"Бубны"); break;
+            case 4: Console.WriteLine($"Червы"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №161. Ввести достоинство карты (числа от 6 до 14). Вывести название: 11 — Валет, 12 — Дама, 13 — Король, 14 — Туз, остальные — по номиналу.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите достоинство карты: ");
+        int card = int.Parse(Console.ReadLine());
+
+        switch (card)
+        {
+            case 11: Console.WriteLine($"Валет"); break;
+            case 12: Console.WriteLine($"Дама"); break;
+            case 13: Console.WriteLine($"Король"); break;
+            case 14: Console.WriteLine($"Туз"); break;
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+                Console.WriteLine($"{card}");
+                break;
+            default:
+                Console.WriteLine($"Ошибка");
+                break;
+        }
+    }
+}
+```
+
+> * №162. Ввести буквенное обозначение размера одежды (XS, S, M, L, XL, XXL). Вывести соответствующий российский размер (42, 44, 46, 48, 50, 52).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите буквенное обозначение размера одежды: ");
+        string size = Console.ReadLine().ToUpper();
+
+        switch (size)
+        {
+            case "XS": Console.WriteLine($"42"); break;
+            case "S": Console.WriteLine($"44"); break;
+            case "M": Console.WriteLine($"46"); break;
+            case "L": Console.WriteLine($"48"); break;
+            case "XL": Console.WriteLine($"50"); break;
+            case "XXL":Console.WriteLine($"52"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №163. Ввести номер единицы длины (1 — дециметр, 2 — километр, 3 — метр, 4 — миллиметр, 5 — сантиметр) и длину отрезка в этих единицах. Перевести и вывести длину в метрах.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine($"1 — дециметр");
+        Console.WriteLine($"2 — километр");
+        Console.WriteLine($"3 — метр");
+        Console.WriteLine($"4 — миллиметр");
+        Console.WriteLine($"5 — сантиметр");
+
+
+        Console.Write("Введите номер единицы длины: ");
+        int edinica = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите длину: ");
+        double value = double.Parse(Console.ReadLine());
+
+        switch (edinica)
+        {
+            case 1: Console.WriteLine($"{value / 10}"); break;
+            case 2: Console.WriteLine($"{value * 1000}"); break;
+            case 3: Console.WriteLine($"{value}"); break;
+            case 4: Console.WriteLine($"{value / 1000}"); break;
+            case 5: Console.WriteLine($"{value / 100}"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №164. Ввести номер единицы массы (1 — килограмм, 2 — миллиграмм, 3 — грамм, 4 — тонна, 5 — центнер) и массу. Вывести массу в килограммах.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine($"1 — килограмм");
+        Console.WriteLine($"2 — миллиграмм");
+        Console.WriteLine($"3 — грамм");
+        Console.WriteLine($"4 — тонна");
+        Console.WriteLine($"5 — центнер");
+
+
+        Console.Write("Введите номер единицы массы: ");
+        int massa = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите массу: ");
+        double value = double.Parse(Console.ReadLine());
+
+        switch (massa)
+        {
+            case 1: Console.WriteLine($"{value}"); break;
+            case 2: Console.WriteLine($"{value / 1000000}"); break;
+            case 3: Console.WriteLine($"{value / 1000}"); break;
+            case 4: Console.WriteLine($"{value * 1000}"); break;
+            case 5: Console.WriteLine($"{value * 100}"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №165. Ввести код ошибки HTTP (200, 301, 400, 403, 404, 500, 502). Вывести текстовую расшифровку статуса.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите HTTP-код: ");
+        int code = int.Parse(Console.ReadLine());
+
+        switch (code)
+        {
+            case 200: Console.WriteLine($"Успешный запрос"); break;
+            case 301: Console.WriteLine($"Перенаправление"); break;
+            case 400: Console.WriteLine($"Неверный запрос"); break;
+            case 403: Console.WriteLine($"Доступ запрещен"); break;
+            case 404: Console.WriteLine($"Страница не найдена"); break;
+            case 500: Console.WriteLine($"Ошибка сервера"); break;
+            case 502: Console.WriteLine($"Ошибка шлюза"); break;
+            default: Console.WriteLine($"Неизвестный код"); break;
+        }
+    }
+}
+```
+
+> * №166. Ввести код валюты (USD, EUR, CNY, RUB). Вывести полное наименование («Доллар США», «Евро», «Китайский юань», «Российский рубль»).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите код валюты: ");
+        string name = Console.ReadLine().ToUpper();
+
+        switch (name)
+        {
+            case "USD": Console.WriteLine($"Доллар США"); break;
+            case "EUR": Console.WriteLine($"Евро"); break;
+            case "CNY": Console.WriteLine($"Китайский юань"); break;
+            case "RUB": Console.WriteLine($"Российский рубль"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №167. Ввести символ клавиши управления движением персонажа (W, A, S, D в любом регистре). Вывести направление движения: вперед, влево, назад, вправо.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите клавишу: ");
+        char simv = char.ToUpper(char.Parse(Console.ReadLine()));
+
+        switch (simv)
+        {
+            case 'W': Console.WriteLine($"Вперед"); break;
+            case 'A': Console.WriteLine($"Влево"); break;
+            case 'S': Console.WriteLine($"Назад"); break;
+            case 'D': Console.WriteLine($"Вправо"); break;
+            default: Console.WriteLine($"Неизвестная клавиша"); break;
+        }
+    }
+}
+```
+
+> * №168. Ввести номер цвета радуги (1–7). Вывести название цвета.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер цвета радуги: ");
+        int color = int.Parse(Console.ReadLine());
+
+        switch (color)
+        {
+            case 1: Console.WriteLine($"Красный"); break;
+            case 2: Console.WriteLine($"Оранжевый"); break;
+            case 3: Console.WriteLine($"Желтый"); break;
+            case 4: Console.WriteLine($"Зеленый"); break;
+            case 5: Console.WriteLine($"Голубой"); break;
+            case 6: Console.WriteLine($"Синий"); break;
+            case 7: Console.WriteLine($"Фиолетовый"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №169. Ввести признак режима селектора АКПП (P, R, N, D, M). Вывести режим трансмиссии.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите признак режима селектора АКПП: ");
+        char mode = char.ToUpper(char.Parse(Console.ReadLine()));
+
+        switch (mode)
+        {
+            case 'P': Console.WriteLine($"Парковка"); break;
+            case 'R': Console.WriteLine($"Задний ход"); break;
+            case 'N': Console.WriteLine($"Нейтраль"); break;
+            case 'D': Console.WriteLine($"Движение вперед"); break;
+            case 'M': Console.WriteLine($"Ручной режим"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №170. Ввести номер пальца руки (1 — большой, 2 — указательный, 3 — средний, 4 — безымянный, 5 — мизинец). Вывести название пальца.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер пальца: ");
+        int finger = int.Parse(Console.ReadLine());
+
+        switch (finger)
+        {
+            case 1: Console.WriteLine($"Большой"); break;
+            case 2: Console.WriteLine($"Указательный"); break;
+            case 3: Console.WriteLine($"Средний"); break;
+            case 4: Console.WriteLine($"Безымянный"); break;
+            case 5: Console.WriteLine($"Мизинец"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №171. Ввести номер планеты от Солнца (1–8). Вывести название планеты Солнечной системы.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер планеты от Солнца: ");
+        int planet = int.Parse(Console.ReadLine());
+
+        switch (planet)
+        {
+            case 1: Console.WriteLine($"Меркурий"); break;
+            case 2: Console.WriteLine($"Венера"); break;
+            case 3: Console.WriteLine($"Земля"); break;
+            case 4: Console.WriteLine($"Марс"); break;
+            case 5: Console.WriteLine($"Юпитер"); break;
+            case 6: Console.WriteLine($"Сатурн"); break;
+            case 7: Console.WriteLine($"Уран"); break;
+            case 8: Console.WriteLine($"Нептун"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №172. Ввести код тарифа мобильной связи (1 — Базовый, 2 — Студенческий, 3 — Безлимит). Вывести абонентскую плату и включенные гигабайты.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine($"1 — Базовый");
+        Console.WriteLine($"2 — Студенческий");
+        Console.WriteLine($"3 — Безлимит");
+
+        Console.Write("Введите номер тарифа: ");
+        int tariff = int.Parse(Console.ReadLine());
+
+        switch (tariff)
+        {
+            case 1:
+                Console.WriteLine($"Базовый: 300 рублей, 10 ГБ");
+                break;
+
+            case 2:
+                Console.WriteLine($"Студенческий: 200 рублей, 20 ГБ");
+                break;
+
+            case 3:
+                Console.WriteLine($"Безлимит: 600 рублей, безлимитный интернет");
+                break;
+
+            default:
+                Console.WriteLine($"Ошибка");
+                break;
+        }
+    }
+}
+```
+
+> * №173. Ввести номер квартала года (1–4). Вывести список входящих в него месяцев.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер квартала: ");
+        int quarter = int.Parse(Console.ReadLine());
+
+        switch (quarter)
+        {
+            case 1:
+                Console.WriteLine($"Январь, Февраль, Март");
+                break;
+
+            case 2:
+                Console.WriteLine($"Апрель, Май, Июнь");
+                break;
+
+            case 3:
+                Console.WriteLine($"Июль, Август, Сентябрь");
+                break;
+
+            case 4:
+                Console.WriteLine($"Октябрь, Ноябрь, Декабрь");
+                break;
+
+            default:
+                Console.WriteLine($"Ошибка");
+                break;
+        }
+    }
+}
+```
+
+> * №174. Ввести букву оценки американской системы (A, B, C, D, F). Вывести эквивалент в пятибалльной системе РФ.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите букву оценки американской системы: ");
+        char grade = char.ToUpper(char.Parse(Console.ReadLine()));
+
+        switch (grade)
+        {
+            case 'A': Console.WriteLine($"5"); break;
+            case 'B': Console.WriteLine($"4"); break;
+            case 'C': Console.WriteLine($"3"); break;
+            case 'D': Console.WriteLine($"2"); break;
+            case 'F': Console.WriteLine($"1"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
