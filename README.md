@@ -4037,7 +4037,7 @@ class Program
     static void Main()
     {
         Console.Write("Введите направление: ");
-        char napravlenie = char.ToUpper(char.Parse(Console.ReadLine()));
+        char napravlenie = char.Parse(Console.ReadLine().ToUpper());
 
         switch (napravlenie)
         {
@@ -4317,7 +4317,7 @@ class Program
     static void Main()
     {
         Console.Write("Введите клавишу: ");
-        char simv = char.ToUpper(char.Parse(Console.ReadLine()));
+        char simv = char.Parse(Console.ReadLine().ToUpper());
 
         switch (simv)
         {
@@ -4368,7 +4368,7 @@ class Program
     static void Main()
     {
         Console.Write("Введите признак режима селектора АКПП: ");
-        char mode = char.ToUpper(char.Parse(Console.ReadLine()));
+        char mode = char.Parse(Console.ReadLine().ToUpper());
 
         switch (mode)
         {
@@ -4522,7 +4522,7 @@ class Program
     static void Main()
     {
         Console.Write("Введите букву оценки американской системы: ");
-        char grade = char.ToUpper(char.Parse(Console.ReadLine()));
+        char grade = char.Parse(Console.ReadLine().ToUpper());
 
         switch (grade)
         {
@@ -4547,7 +4547,7 @@ class Program
     static void Main()
     {
         Console.Write("Введите символ операции над множествами: ");
-        char operation = char.ToUpper(char.Parse(Console.ReadLine()));
+        char operation = char.Parse(Console.ReadLine().ToUpper());
 
         switch (operation)
         {
@@ -4624,7 +4624,7 @@ class Program
     static void Main()
     {
         Console.Write("Введите римскую цифру: ");
-        char rim = char.ToUpper(char.Parse(Console.ReadLine()));
+        char rim = char.Parse(Console.ReadLine().ToUpper());
 
         switch (rim)
         {
@@ -4694,6 +4694,255 @@ class Program
             case 3: Console.WriteLine($"Гибридный — топливо и электричество"); break;
             case 4: Console.WriteLine($"Электрический — электрическая энергия"); break;
             default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №181. Ввести номер операции в банкомате: 1 — Баланс, 2 — Снятие наличных, 3 — Пополнение, 4 — Перевод. Вывести сообщение о начале выбранной процедуры.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер операции: ");
+        int operation = int.Parse(Console.ReadLine());
+
+        switch (operation)
+        {
+            case 1: Console.WriteLine($"Начинается проверка баланса."); break;
+            case 2: Console.WriteLine($"Начинается снятие наличных."); break;
+            case 3: Console.WriteLine($"Начинается пополнение счета."); break;
+            case 4: Console.WriteLine($"Начинается перевод."); break;
+            default: Console.WriteLine($"Ошибка."); break;
+        }
+    }
+}
+```
+
+> * №182. Ввести расширение файла (txt, cs, html, png, mp3). Вывести тип содержимого: текстовый документ, исходный код C#, веб-страница, изображение, аудиофайл.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите расширение файла: ");
+        string file = Console.ReadLine();
+
+        switch (file)
+        {
+            case "txt": Console.WriteLine($"Текстовый документ"); break;
+            case "cs": Console.WriteLine($"Исходный код C#"); break;
+            case "html": Console.WriteLine($"Веб-страница"); break;
+            case "png": Console.WriteLine($"Изображение"); break;
+            case "mp3": Console.WriteLine($"Аудиофайл"); break;
+            default: Console.WriteLine($"Неизвестный тип файла"); break;
+        }
+    }
+}
+```
+
+> * №183. Ввести номер химического элемента из первых пяти таблицы Менделеева (1–5). Вывести название элемента и его символ.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер элемента: ");
+        int number = int.Parse(Console.ReadLine());
+
+        switch (number)
+        {
+            case 1: Console.WriteLine($"Водород H"); break;
+            case 2: Console.WriteLine($"Гелий He"); break;
+            case 3: Console.WriteLine($"Литий Li"); break;
+            case 4: Console.WriteLine($"Бериллий Be"); break;
+            case 5: Console.WriteLine($"Бор B"); break;
+            default: Console.WriteLine($"Ошибка."); break;
+        }
+    }
+}
+```
+
+> * №184. Ввести код статуса заказа в интернет-магазине (NEW, PAID, SHIPPED, DELIVERED, CANCELED). Вывести подсказку для клиента.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите статус заказа: ");
+        string status = Console.ReadLine().ToUpper();
+
+        switch (status)
+        {
+            case "NEW": Console.WriteLine($"Заказ принят и ожидает обработки."); break;
+            case "PAID": Console.WriteLine($"Заказ оплачен."); break;
+            case "SHIPPED": Console.WriteLine($"Заказ отправлен."); break;
+            case "DELIVERED": Console.WriteLine($"Заказ доставлен."); break;
+            case "CANCELED": Console.WriteLine($"Заказ отменен."); break;
+            default: Console.WriteLine($"Неизвестный статус."); break;
+        }
+    }
+}
+```
+
+> * №185. Ввести код системы счисления (2, 8, 10, 16) и перевести введенное десятичное число в выбранную систему (через методы класса Convert).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите десятичное число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        Console.Write("Введите систему счисления: ");
+        int system = int.Parse(Console.ReadLine());
+
+        switch (system)
+        {
+            case 2: Console.WriteLine($"{Convert.ToString(number, 2)}"); break;
+            case 8: Console.WriteLine($"{Convert.ToString(number, 8)}"); break;
+            case 10: Console.WriteLine($"{Convert.ToString(number, 10)}"); break;
+            case 16: Console.WriteLine($"{Convert.ToString(number, 16)}"); break;
+            default: Console.WriteLine($"Ошибка."); break;
+        }
+    }
+}
+```
+
+> * №186. Ввести номер курса колледжа (1–4). Вывести: «Первокурсник», «Второй курс», «Предвыпускной курс», «Выпускник».
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер курса: ");
+        int course = int.Parse(Console.ReadLine());
+
+        switch (course)
+        {
+            case 1: Console.WriteLine($"Первокурсник"); break;
+            case 2: Console.WriteLine($"Второй курс"); break;
+            case 3: Console.WriteLine($"Предвыпускной курс"); break;
+            case 4: Console.WriteLine($"Выпускник"); break;
+            default: Console.WriteLine($"Ошибка."); break;
+        }
+    }
+}
+```
+
+> * №187. Ввести код климатической зоны (1 — Арктическая, 2 — Субарктическая, 3 — Умеренная, 4 — Субтропическая, 5 — Тропическая). Вывести краткую характеристику.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите код зоны: ");
+        int zone = int.Parse(Console.ReadLine());
+
+        switch (zone)
+        {
+            case 1: Console.WriteLine($"Арктическая — очень холодный климат"); break;
+            case 2: Console.WriteLine($"Субарктическая — холодная зима и прохладное лето"); break;
+            case 3: Console.WriteLine($"Умеренная — смена времен года"); break;
+            case 4: Console.WriteLine($"Субтропическая — теплый климат"); break;
+            case 5: Console.WriteLine($"Тропическая — жаркий климат"); break;
+            default: Console.WriteLine($"Ошибка."); break;
+        }
+    }
+}
+```
+
+> * №188. Ввести класс пожарной опасности (1–5). Вывести уровень угрозы и ограничения на посещение лесов.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите класс пожарной опасности: ");
+        int danger = int.Parse(Console.ReadLine());
+
+        switch (danger)
+        {
+            case 1: Console.WriteLine($"Уровень низкий. Ограничений нет"); break;
+            case 2: Console.WriteLine($"Уровень умеренный. Соблюдайте осторожность"); break;
+            case 3: Console.WriteLine($"Уровень высокий. Посещение лесов ограничено"); break;
+            case 4: Console.WriteLine($"Уровень очень высокий. Посещение лесов запрещено"); break;
+            case 5: Console.WriteLine($"Уровень чрезвычайный. Посещение лесов запрещено"); break;
+            default: Console.WriteLine($"Ошибка."); break;
+        }
+    }
+}
+```
+
+> * №189. Ввести номер спортивного разряда (1 — Юношеский, 2 — Взрослый, 3 — КМС, 4 — МС, 5 — МСМК). Вывести расшифровку.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер разряда: ");
+        int razryad = int.Parse(Console.ReadLine());
+
+        switch (razryad)
+        {
+            case 1: Console.WriteLine($"Юношеский разряд"); break;
+            case 2: Console.WriteLine($"Взрослый разряд"); break;
+            case 3: Console.WriteLine($"КМС - Кандидат в мастера спорта"); break;
+            case 4: Console.WriteLine($"МС - Мастер спорта"); break;
+            case 5: Console.WriteLine($"МСМК - Мастер спорта международного класса"); break;
+            default: Console.WriteLine($"Ошибка."); break;
+        }
+    }
+}
+```
+
+> * №190. Ввести код уровня доступа пользователя (G — Guest, U — User, M — Moderator, A — Administrator). Вывести перечень разрешенных действий.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите код доступа: ");
+        char dostup = char.Parse(Console.ReadLine().ToUpper());
+
+        switch (dostup)
+        {
+            case 'G': Console.WriteLine($"Guest — просмотр общедоступной информации."); break;
+            case 'U': Console.WriteLine($"User — работа с обычными функциями."); break;
+            case 'M': Console.WriteLine($"Moderator — управление контентом."); break;
+            case 'A': Console.WriteLine($"Administrator — полный доступ."); break;
+            default: Console.WriteLine($"Ошибка."); break;
         }
     }
 }
