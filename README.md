@@ -3771,3 +3771,282 @@ class Program
 ---
 ### Раздел 4. Оператор выбора switch
 ---
+
+> * №151. Ввести номер дня недели (1–7). Вывести его словесное название на русском языке.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер дня: ");
+        int day = int.Parse(Console.ReadLine());
+
+        switch (day)
+        {
+            case 1: Console.WriteLine($"Понедельник"); break;
+            case 2: Console.WriteLine($"Вторник"); break;
+            case 3: Console.WriteLine($"Среда"); break;
+            case 4: Console.WriteLine($"Четверг"); break;
+            case 5: Console.WriteLine($"Пятница"); break;
+            case 6: Console.WriteLine($"Суббота"); break;
+            case 7: Console.WriteLine($"Воскресенье"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №152. Ввести номер дня недели (1–7). Вывести, является ли день рабочим («Будни») или нерабочим («Выходной»).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер дня: ");
+        int day = int.Parse(Console.ReadLine());
+
+        switch (day)
+        {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                Console.WriteLine($"Будни");
+                break;
+
+            case 6:
+            case 7:
+                Console.WriteLine($"Выходной");
+                break;
+
+            default:
+                Console.WriteLine($"Ошибка");
+                break;
+        }
+    }
+}
+```
+
+> * №153. Ввести номер месяца (1–12). Вывести название месяца.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер месяца: ");
+        int month = int.Parse(Console.ReadLine());
+
+        switch (month)
+        {
+            case 1: Console.WriteLine($"Январь"); break;
+            case 2: Console.WriteLine($"Февраль"); break;
+            case 3: Console.WriteLine($"Март"); break;
+            case 4: Console.WriteLine($"Апрель"); break;
+            case 5: Console.WriteLine($"Май"); break;
+            case 6: Console.WriteLine($"Июнь"); break;
+            case 7: Console.WriteLine($"Июль"); break;
+            case 8: Console.WriteLine($"Август"); break;
+            case 9: Console.WriteLine($"Сентябрь"); break;
+            case 10: Console.WriteLine($"Октябрь"); break;
+            case 11: Console.WriteLine($"Ноябрь"); break;
+            case 12: Console.WriteLine($"Декабрь"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №154. Ввести номер месяца (1–12). Вывести количество дней в этом месяце (для невисокосного года).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер месяца: ");
+        int month = int.Parse(Console.ReadLine());
+
+        switch (month)
+        {
+            case 2:
+                Console.WriteLine($"28 дней");
+                break;
+
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                Console.WriteLine($"30 дней");
+                break;
+
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                Console.WriteLine($"31 день");
+                break;
+
+            default:
+                Console.WriteLine($"Ошибка");
+                break;
+        }
+    }
+}
+```
+
+> * №155. Ввести номер месяца (1–12). Вывести название поры года («Зима», «Весна», «Лето», «Осень»).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер месяца: ");
+        int month = int.Parse(Console.ReadLine());
+
+        switch (month)
+        {
+            case 12:
+            case 1:
+            case 2:
+                Console.WriteLine($"Зима");
+                break;
+
+            case 3:
+            case 4:
+            case 5:
+                Console.WriteLine($"Весна");
+                break;
+
+            case 6:
+            case 7:
+            case 8:
+                Console.WriteLine($"Лето");
+                break;
+
+            case 9:
+            case 10:
+            case 11:
+                Console.WriteLine($"Осень");
+                break;
+
+            default:
+                Console.WriteLine($"Ошибка");
+                break;
+        }
+    }
+}
+```
+
+> * №156. Ввести оценку студента (1–5). Вывести текстовое описание: 1 — «Очень плохо», 2 — «Неудовлетворительно», 3 — «Удовлетворительно», 4 — «Хорошо», 5 — «Отлично».
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите оценку: ");
+        int grade = int.Parse(Console.ReadLine());
+
+        switch (grade)
+        {
+            case 1: Console.WriteLine($"Очень плохо"); break;
+            case 2: Console.WriteLine($"Неудовлетворительно"); break;
+            case 3: Console.WriteLine($"Удовлетворительно"); break;
+            case 4: Console.WriteLine($"Хорошо"); break;
+            case 5: Console.WriteLine($"Отлично"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №157. Реализовать простой калькулятор: ввести два вещественных числа и символ арифметической операции (+, -, *, /). Через switch выполнить вычисление. Предусмотреть защиту от деления на ноль.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите первое число: ");
+        double a = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите второе число: ");
+        double b = double.Parse(Console.ReadLine());
+
+        Console.Write("Введите операцию: ");
+        char operation = char.Parse(Console.ReadLine());
+
+        switch (operation)
+        {
+            case '+':
+                Console.WriteLine($"{a + b}");
+                break;
+
+            case '-':
+                Console.WriteLine($"{a - b}");
+                break;
+
+            case '*':
+                Console.WriteLine($"{a * b}");
+                break;
+
+            case '/':
+                if (b != 0)
+                    Console.WriteLine($"{a / b}");
+                else
+                    Console.WriteLine($"На ноль делить нельзя");
+                break;
+
+            default:
+                Console.WriteLine($"Ошибка");
+                break;
+        }
+    }
+}
+```
+
+> * №158. Ввести букву направления света (N, S, W, E). Вывести название направления («Север», «Юг», «Запад», «Восток»).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите направление: ");
+        char napravlenie = char.ToUpper(char.Parse(Console.ReadLine()));
+
+        switch (napravlenie)
+        {
+            case 'N': Console.WriteLine($"Север"); break;
+            case 'S': Console.WriteLine($"Юг"); break;
+            case 'W': Console.WriteLine($"Запад"); break;
+            case 'E': Console.WriteLine($"Восток"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
