@@ -4536,3 +4536,165 @@ class Program
     }
 }
 ```
+
+> * №175. Ввести символ операции над множествами (U — объединение, I — пересечение, D — разность). Вывести расшифровку операции.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите символ операции над множествами: ");
+        char operation = char.ToUpper(char.Parse(Console.ReadLine()));
+
+        switch (operation)
+        {
+            case 'U': Console.WriteLine($"Объединение"); break;
+            case 'I': Console.WriteLine($"Пересечение"); break;
+            case 'D': Console.WriteLine($"Разность"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №176. Ввести номер режима работы светофора (1 — Красный, 2 — Желтый, 3 — Зеленый, 4 — Мигающий желтый). Вывести предписание для водителя.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите номер режима: ");
+        int mode = int.Parse(Console.ReadLine());
+
+        switch (mode)
+        {
+            case 1: Console.WriteLine($"Красный — остановиться"); break;
+            case 2: Console.WriteLine($"Желтый — приготовиться"); break;
+            case 3: Console.WriteLine($"Зеленый — можно ехать"); break;
+            case 4: Console.WriteLine($"Мигающий желтый — двигаться осторожно"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №177. Ввести цифру (0–9). Вывести ее словесное написание на русском языке.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите цифру: ");
+        int number = int.Parse(Console.ReadLine());
+
+        switch (number)
+        {
+            case 0: Console.WriteLine($"Ноль"); break;
+            case 1: Console.WriteLine($"Один"); break;
+            case 2: Console.WriteLine($"Два"); break;
+            case 3: Console.WriteLine($"Три"); break;
+            case 4: Console.WriteLine($"Четыре"); break;
+            case 5: Console.WriteLine($"Пять"); break;
+            case 6: Console.WriteLine($"Шесть"); break;
+            case 7: Console.WriteLine($"Семь"); break;
+            case 8: Console.WriteLine($"Восемь"); break;
+            case 9: Console.WriteLine($"Девять"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №178. Ввести римскую цифру (I, V, X, L, C, D, M). Вывести ее арабское значение.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введите римскую цифру: ");
+        char rim = char.ToUpper(char.Parse(Console.ReadLine()));
+
+        switch (rim)
+        {
+            case 'I': Console.WriteLine($"1"); break;
+            case 'V': Console.WriteLine($"5"); break;
+            case 'X': Console.WriteLine($"10"); break;
+            case 'L': Console.WriteLine($"50"); break;
+            case 'C': Console.WriteLine($"100"); break;
+            case 'D': Console.WriteLine($"500"); break;
+            case 'M': Console.WriteLine($"1000"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №179. Ввести номер типа транспортного средства (1 — Мотоцикл, 2 — Легковой авто, 3 — Грузовой авто, 4 — Автобус). Вывести категорию водительского удостоверения (A, B, C, D).
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine($"1 — Мотоцикл");
+        Console.WriteLine($"2 — Легковой авто");
+        Console.WriteLine($"3 — Грузовой авто");
+        Console.WriteLine($"4 — Автобус");
+
+        Console.Write("Введите номер транспорта: ");
+        int transport = int.Parse(Console.ReadLine());
+
+        switch (transport)
+        {
+            case 1: Console.WriteLine($"Мотоцикл — категория A"); break;
+            case 2: Console.WriteLine($"Легковой авто — категория B"); break;
+            case 3: Console.WriteLine($"Грузовой авто — категория C"); break;
+            case 4: Console.WriteLine($"Автобус — категория D"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
+
+> * №180. Ввести тип двигателя (1 — Бензиновый, 2 — Дизельный, 3 — Гибридный, 4 — Электрический). Вывести вид используемого источника энергии.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine($"1 — Бензиновый");
+        Console.WriteLine($"2 — Дизельный");
+        Console.WriteLine($"3 — Гибридный");
+        Console.WriteLine($"4 — Электрический");
+
+        Console.Write("Введите номер двигателя: ");
+        int engine = int.Parse(Console.ReadLine());
+
+        switch (engine)
+        {
+            case 1: Console.WriteLine($"Бензиновый — бензин"); break;
+            case 2: Console.WriteLine($"Дизельный — дизельное топливо"); break;
+            case 3: Console.WriteLine($"Гибридный — топливо и электричество"); break;
+            case 4: Console.WriteLine($"Электрический — электрическая энергия"); break;
+            default: Console.WriteLine($"Ошибка"); break;
+        }
+    }
+}
+```
