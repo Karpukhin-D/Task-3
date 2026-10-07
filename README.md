@@ -50,6 +50,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.2.png">
+</picture>
 
 > * №3. Даны два целых числа. Вывести наибольшее из них.
 ```csharp
@@ -76,6 +80,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.3.png">
+</picture>
 
 > * №4. Даны два числа с плавающей точкой. Вывести наименьшее.
 ```csharp
@@ -102,6 +110,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.4.png">
+</picture>
 
 > * №5. Проверить, делится ли введенное число нацело на 5.
 ```csharp
@@ -124,6 +136,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.5.png">
+</picture>
 
 > * №6. Проверить, оканчивается ли введенное целое число нулем.
 ```csharp
@@ -146,6 +162,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.6.png">
+</picture>
 
 > * №7. Пользователь вводит температуру воздуха. Если она ниже нуля, вывести: «На улице мороз, наденьте шапку».
 ```csharp
@@ -164,6 +184,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.7.png">
+</picture>
 
 > * №8. Дано число. Если оно больше 100, уменьшить его на 20, иначе увеличить на 10.
 ```csharp
@@ -187,6 +211,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.8.png">
+</picture>
 
 > * №9. Ввести два числа. Если они равны, вывести «Числа равны», иначе вывести их произведение.
 ```csharp
@@ -213,6 +241,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.9.png">
+</picture>
 
 > * №10. Пользователь вводит свой возраст. Если возраст от 18 и старше, вывести «Доступ разрешен», иначе «Доступ запрещен».
 ```csharp
@@ -235,6 +267,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.10.png">
+</picture>
 
 > * №11. Ввести число. Если оно трехзначное, вывести «Да», иначе «Нет».
 ```csharp
@@ -257,6 +293,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.11.png">
+</picture>
 
 > * №12. Проверить, делится ли число на 3 без остатка.
 ```csharp
@@ -280,6 +320,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.12.png">
+</picture>
 
 > * №13. Даны координаты точки на числовой прямой X. Определить, лежит ли точка правее нуля.
 ```csharp
@@ -303,6 +347,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.13.png">
+</picture>
 
 > * №14. Ввести баланс счета. Если баланс отрицательный, вывести «Задолженность!».
 ```csharp
@@ -322,7 +370,10 @@ class Program
     }
 }
 ```
-
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.14.png">
+</picture>
 > * №15. Пользователь вводит пароль (целое число). Если введен 1234, вывести «Вход выполнен», иначе «Неверный пароль».
 
 ```csharp
@@ -346,6 +397,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.15.png">
+</picture>
 
 > * №16. Проверить, является ли введенное число отрицательным.
 
@@ -370,6 +425,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.16.png">
+</picture>
 
 > * №17. Даны два числа. Вывести разность большего и меньшего числа.
 
@@ -397,6 +456,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.17.png">
+</picture>
 
 > * №18. Ввести сумму покупки. Если сумма превышает 1000 рублей, предоставить скидку 5% и вывести итоговую цену.
 
@@ -419,6 +482,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.18.png">
+</picture>
 
 > * №19. Ввести число. Если оно четное, разделить его на 2, если нечетное — умножить на 3.
 
@@ -444,6 +511,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.19.png">
+</picture>
 
 > * №20. Пользователь вводит скорость движения. Если скорость выше 90 км/ч, вывести сообщение о нарушении.
 
@@ -468,6 +539,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.20.png">
+</picture>
 
 > * №21. Дано целое число. Проверить, равно ли оно нулю.
 
