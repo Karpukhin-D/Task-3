@@ -2921,7 +2921,7 @@ class Program
 ```
 `Результат выполнения:`
 <picture>
-  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.101.png">
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.101.png">
 </picture>
 
 > * №102. Проверить, является ли введенное целое число положительным и четным одновременно.
@@ -2943,6 +2943,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.102.png">
+</picture>
 
 > * №103. Проверить, лежит ли число вне диапазона [−10;10].
 
@@ -2963,6 +2967,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.103.png">
+</picture>
 
 > * №104. Ввести логин и пароль пользователя. Вывести «Успех», если логин равен admin и пароль secret.
 
@@ -2986,6 +2994,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.104.png">
+</picture>
 
 > * №105. Проверить, является ли введенный год високосным (делится на 4, но не на 100, либо делится на 400).
 
@@ -3006,6 +3018,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.105.png">
+</picture>
 
 > * №106. Даны координаты точки (X,Y). Определить, попадает ли точка в I координатную четверть (X>0 и Y>0).
 
@@ -3029,6 +3045,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.106.png">
+</picture>
 
 > * №107. Определить, попадает ли точка (X,Y) во II четверть плоскости.
 
@@ -3052,6 +3072,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.107.png">
+</picture>
 
 > * №108. Определить, попадает ли точка (X,Y) в III четверть плоскости.
 
@@ -3075,6 +3099,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.108.png">
+</picture>
 
 > * №109. Определить, попадает ли точка (X,Y) в IV четверть плоскости.
 
@@ -3098,6 +3126,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.109.png">
+</picture>
 
 > * №110. Даны три стороны A, B, C. Проверить, является ли треугольник прямоугольным (теорема Пифагора).
 
@@ -3126,6 +3158,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.110.png">
+</picture>
 
 > * №111. Даны три стороны. Проверить, является ли треугольник равнобедренным.
 
