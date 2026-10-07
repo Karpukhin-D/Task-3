@@ -3188,6 +3188,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.111.png">
+</picture>
 
 > * №112. Ввести возраст и стаж вождения. Разрешить аренду каршеринга бизнес-класса, если возраст ≥23 лет И стаж ≥3 лет.
 
@@ -3211,6 +3215,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.112.png">
+</picture>
 
 > * №113. Проверить, делится ли число одновременно на 3 и на 5 без остатка.
 
@@ -3231,6 +3239,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.113.png">
+</picture>
 
 > * №114. Проверить, является ли число трехзначным и оканчивается ли оно на цифру 5.
 
@@ -3251,6 +3263,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.114.png">
+</picture>
 
 > * №115. Даны три числа. Проверить, упорядочены ли они строго по возрастанию (A<B<C).
 
@@ -3277,6 +3293,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.115.png">
+</picture>
 
 > * №116. Проверить, верно ли, что среди трех введенных чисел есть хотя бы одно четное.
 
@@ -3303,6 +3323,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.116.png">
+</picture>
 
 > * №117. Проверить, верно ли, что среди трех чисел ровно одно равно нулю.
 
@@ -3331,6 +3355,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.117.png">
+</picture>
 
 > * №118. Ввести температуру и влажность. Вывести предупреждение о гололедице, если температура ≤0∘C И влажность >85.
 
@@ -3354,6 +3382,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.118.png">
+</picture>
 
 > * №119. Даны координаты точки (X,Y). Проверить, лежит ли точка внутри круга радиуса R с центром в начале координат (x2+y2≤R2).
 
@@ -3380,6 +3412,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.119.png">
+</picture>
 
 > * №120. Даны координаты точки (X,Y). Проверить, лежит ли точка внутри прямоугольника со сторонами, параллельными осям, заданного углами (X1,Y1) и (X2,Y2).
 
@@ -3421,6 +3457,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.120.png">
+</picture>
 
 > * №121. Ввести день и месяц рождения. Проверить, корректна ли дата (например, день от 1 до 31, месяц от 1 до 12, с учетом длины месяцев).
 
@@ -3453,6 +3493,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.121.png">
+</picture>
 
 > * №122. Ввести номер месяца. Проверить, относится ли он к зимнему периоду (12, 1 или 2).
 
@@ -3473,6 +3517,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.122.png">
+</picture>
 
 > * №123. Проверить, является ли четырехзначное число «счастливым билетом» (сумма первых двух цифр равна сумме двух последних).
 
@@ -3505,6 +3553,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.123.png">
+</picture>
 
 > * №124. Ввести три числа. Проверить истинность высказывания: «Хотя бы одна пара чисел взаимно противоположна (A=−B)».
 
@@ -3531,6 +3583,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.124.png">
+</picture>
 
 > * №125. Пользователь вводит показания двух датчиков аварии. Сформировать тревогу, если сработал хотя бы один датчик И при этом включен тумблер защиты.
 
@@ -3557,6 +3613,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.125.png">
+</picture>
 
 > * №126. Проверить, лежит ли число X строго между числами A и B (учесть, что A может быть больше B).
 
@@ -3583,6 +3643,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.126.png">
+</picture>
 
 > * №127. Даны два целых числа. Проверить, имеют ли они одинаковый знак (оба положительные или оба отрицательные).
 
@@ -3606,6 +3670,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.127.png">
+</picture>
 
 > * №128. Даны шахматные координаты двух клеток (x1,y1) и (x2,y2) от 1 до 8. Определить, угрожает ли ладья с первой клетки фигуре на второй клетке (совпадает либо строка, либо столбец).
 
@@ -3635,6 +3703,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.128.png">
+</picture>
 
 > * №129. Для двух клеток шахматной доски определить, угрожает ли слон (разность координат по модулю одинакова).
 
@@ -3664,6 +3736,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.129.png">
+</picture>
 
 > * №130. Для двух клеток шахматной доски определить, угрожает ли ферзь (объединение логики ладьи и слона).
 
@@ -3694,6 +3770,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.130.png">
+</picture>
 
 > * №131. Для двух клеток определить, может ли конь пойти с одной на другую.
 
@@ -3724,6 +3804,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.131.png">
+</picture>
 
 > * №132. Для двух клеток шахматной доски проверить, одинакового ли они цвета.
 
@@ -3753,6 +3837,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.132.png">
+</picture>
 
 > * №133. Ввести рост и вес кандидата в космонавты. Проверить соответствие: рост от 160 до 190 см И вес от 50 до 90 кг.
 
@@ -3777,6 +3865,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.133.png">
+</picture>
 
 > * №134. Дано натуральное число N. Проверить, является ли оно четным двузначным числом.
 
@@ -3797,6 +3889,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.134.png">
+</picture>
 
 > * №135. Дано натуральное число. Проверить, является ли оно нечетным трехзначным числом.
 
@@ -3817,6 +3913,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.135.png">
+</picture>
 
 > * №136. Ввести результаты двух экзаменов (математика и информатика). Абитуриент зачислен, если сумма баллов ≥150 И по каждому предмету не менее 50 баллов.
 
@@ -3841,6 +3941,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.136.png">
+</picture>
 
 > * №137. Проверить, лежит ли точка с координатами (X,Y) в круговом кольце с внутренним радиусом R1 и внешним R2.
 
@@ -3872,6 +3976,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.137.png">
+</picture>
 
 > * №138. Ввести статус билета (true/false) и наличие багажа. Вывести: требуется ли дополнительная оплата багажа.
 
@@ -3895,6 +4003,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.138.png">
+</picture>
 
 > * №139. Дано четырехзначное число. Проверить, читается ли оно одинаково слева направо и справа налево (палиндром).
 
@@ -3920,6 +4032,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.139.png">
+</picture>
 
 > * №140. Ввести напряжение сети (Вольты) и частоту (Гц). Норма: 220 В±10 И частота 50 Гц±1 Гц. Вывести статус стабильности сети.
 
@@ -3944,6 +4060,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.140.png">
+</picture>
 
 > * №141. Ввести признак наличия прав (bool), страховки (bool) и трезвости водителя (bool). Разрешить выезд только при соблюдении всех трех факторов.
 
@@ -3970,6 +4090,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.141.png">
+</picture>
 
 > * №142. Проверить, делится ли введенное число на 4 ИЛИ на 7, но НЕ делится на 28.
 
@@ -3991,6 +4115,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.142.png">
+</picture>
 
 > * №143. Ввести текущий месяц и температуру. Вывести аномалию, если месяц летний (6, 7, 8), а температура ниже нуля.
 
@@ -4015,6 +4143,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.143.png">
+</picture>
 
 > * №144. Даны три логические переменные A, B, C. Реализовать проверку формулы мажоритарного клапана: «Истинно, если хотя бы две из трех переменных истинны».
 
@@ -4041,6 +4173,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.144.png">
+</picture>
 
 > * №145. Даны три вещественных числа. Проверить, могут ли они являться длинами сторон тупоугольного треугольника.
 
@@ -4074,6 +4210,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.145.png">
+</picture>
 
 > * №146. Даны три вещественных числа. Проверить, могут ли они являться длинами сторон остроугольного треугольника.
 
@@ -4103,6 +4243,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.146.png">
+</picture>
 
 > * №147. Ввести время (часы и минуты). Проверить, попадает ли указанное время в интервал тихого часа (с 13:00 до 15:00).
 
@@ -4128,6 +4272,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.147.png">
+</picture>
 
 > * №148. Проверить, что все цифры введенного трехзначного числа различны между собой.
 
@@ -4163,6 +4311,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.148.png">
+</picture>
 
 > * №149. Ввести логическое значение двух кнопок пульта. Станок запускается только при одновременном зажатии обеих кнопок (защита от случайного пуска).
 
@@ -4186,6 +4338,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.149.png">
+</picture>
 
 > * №150. Проверить, лежит ли точка (X,Y) ниже прямой Y=2X+1 и выше параболы Y=X2.
 
@@ -4209,6 +4365,11 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.150.png">
+</picture>
+
 ---
 ### Раздел 4. Оператор выбора switch
 ---
@@ -4239,6 +4400,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.151.png">
+</picture>
 
 > * №152. Ввести номер дня недели (1–7). Вывести, является ли день рабочим («Будни») или нерабочим («Выходной»).
 
@@ -4274,6 +4439,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.152.png">
+</picture>
 
 > * №153. Ввести номер месяца (1–12). Вывести название месяца.
 
@@ -4306,6 +4475,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.153.png">
+</picture>
 
 > * №154. Ввести номер месяца (1–12). Вывести количество дней в этом месяце (для невисокосного года).
 
@@ -4349,6 +4522,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.154.png">
+</picture>
 
 > * №155. Ввести номер месяца (1–12). Вывести название поры года («Зима», «Весна», «Лето», «Осень»).
 
@@ -4395,6 +4572,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.155.png">
+</picture>
 
 > * №156. Ввести оценку студента (1–5). Вывести текстовое описание: 1 — «Очень плохо», 2 — «Неудовлетворительно», 3 — «Удовлетворительно», 4 — «Хорошо», 5 — «Отлично».
 
@@ -4420,6 +4601,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.156.png">
+</picture>
 
 > * №157. Реализовать простой калькулятор: ввести два вещественных числа и символ арифметической операции (+, -, *, /). Через switch выполнить вычисление. Предусмотреть защиту от деления на ноль.
 
@@ -4467,6 +4652,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.157.png">
+</picture>
 
 > * №158. Ввести букву направления света (N, S, W, E). Вывести название направления («Север», «Юг», «Запад», «Восток»).
 
@@ -4491,6 +4680,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.158.png">
+</picture>
 
 > * №159. Ввести номер геометрической фигуры (1 — круг, 2 — прямоугольник, 3 — треугольник). Запросить соответствующие параметры фигуры и вычислить ее площадь.
 
@@ -4543,6 +4736,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.159.png">
+</picture>
 
 > * №160. Ввести номер масти игральной карты (1 — пики, 2 — трефы, 3 — бубны, 4 — червы). Вывести название масти.
 
@@ -4567,6 +4764,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.160.png">
+</picture>
 
 > * №161. Ввести достоинство карты (числа от 6 до 14). Вывести название: 11 — Валет, 12 — Дама, 13 — Король, 14 — Туз, остальные — по номиналу.
 
@@ -4600,6 +4801,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.161.png">
+</picture>
 
 > * №162. Ввести буквенное обозначение размера одежды (XS, S, M, L, XL, XXL). Вывести соответствующий российский размер (42, 44, 46, 48, 50, 52).
 
@@ -4626,6 +4831,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.162.png">
+</picture>
 
 > * №163. Ввести номер единицы длины (1 — дециметр, 2 — километр, 3 — метр, 4 — миллиметр, 5 — сантиметр) и длину отрезка в этих единицах. Перевести и вывести длину в метрах.
 
@@ -4661,6 +4870,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.163.png">
+</picture>
 
 > * №164. Ввести номер единицы массы (1 — килограмм, 2 — миллиграмм, 3 — грамм, 4 — тонна, 5 — центнер) и массу. Вывести массу в килограммах.
 
@@ -4696,6 +4909,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.164.png">
+</picture>
 
 > * №165. Ввести код ошибки HTTP (200, 301, 400, 403, 404, 500, 502). Вывести текстовую расшифровку статуса.
 
@@ -4723,6 +4940,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.165.png">
+</picture>
 
 > * №166. Ввести код валюты (USD, EUR, CNY, RUB). Вывести полное наименование («Доллар США», «Евро», «Китайский юань», «Российский рубль»).
 
@@ -4747,6 +4968,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.166.png">
+</picture>
 
 > * №167. Ввести символ клавиши управления движением персонажа (W, A, S, D в любом регистре). Вывести направление движения: вперед, влево, назад, вправо.
 
@@ -4771,6 +4996,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.167.png">
+</picture>
 
 > * №168. Ввести номер цвета радуги (1–7). Вывести название цвета.
 
@@ -4798,6 +5027,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.168.png">
+</picture>
 
 > * №169. Ввести признак режима селектора АКПП (P, R, N, D, M). Вывести режим трансмиссии.
 
@@ -4823,6 +5056,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.169.png">
+</picture>
 
 > * №170. Ввести номер пальца руки (1 — большой, 2 — указательный, 3 — средний, 4 — безымянный, 5 — мизинец). Вывести название пальца.
 
@@ -4848,6 +5085,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.170.png">
+</picture>
 
 > * №171. Ввести номер планеты от Солнца (1–8). Вывести название планеты Солнечной системы.
 
@@ -4876,6 +5117,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.171.png">
+</picture>
 
 > * №172. Ввести код тарифа мобильной связи (1 — Базовый, 2 — Студенческий, 3 — Безлимит). Вывести абонентскую плату и включенные гигабайты.
 
@@ -4914,6 +5159,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.172.png">
+</picture>
 
 > * №173. Ввести номер квартала года (1–4). Вывести список входящих в него месяцев.
 
@@ -4952,6 +5201,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.173.png">
+</picture>
 
 > * №174. Ввести букву оценки американской системы (A, B, C, D, F). Вывести эквивалент в пятибалльной системе РФ.
 
@@ -4977,6 +5230,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.174.png">
+</picture>
 
 > * №175. Ввести символ операции над множествами (U — объединение, I — пересечение, D — разность). Вывести расшифровку операции.
 
@@ -5000,6 +5257,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.175.png">
+</picture>
 
 > * №176. Ввести номер режима работы светофора (1 — Красный, 2 — Желтый, 3 — Зеленый, 4 — Мигающий желтый). Вывести предписание для водителя.
 
@@ -5024,6 +5285,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.176.png">
+</picture>
 
 > * №177. Ввести цифру (0–9). Вывести ее словесное написание на русском языке.
 
@@ -5054,6 +5319,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.177.png">
+</picture>
 
 > * №178. Ввести римскую цифру (I, V, X, L, C, D, M). Вывести ее арабское значение.
 
@@ -5081,6 +5350,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.178.png">
+</picture>
 
 > * №179. Ввести номер типа транспортного средства (1 — Мотоцикл, 2 — Легковой авто, 3 — Грузовой авто, 4 — Автобус). Вывести категорию водительского удостоверения (A, B, C, D).
 
@@ -5110,6 +5383,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.179.png">
+</picture>
 
 > * №180. Ввести тип двигателя (1 — Бензиновый, 2 — Дизельный, 3 — Гибридный, 4 — Электрический). Вывести вид используемого источника энергии.
 
@@ -5139,6 +5416,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.180.png">
+</picture>
 
 > * №181. Ввести номер операции в банкомате: 1 — Баланс, 2 — Снятие наличных, 3 — Пополнение, 4 — Перевод. Вывести сообщение о начале выбранной процедуры.
 
@@ -5163,6 +5444,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.181.png">
+</picture>
 
 > * №182. Ввести расширение файла (txt, cs, html, png, mp3). Вывести тип содержимого: текстовый документ, исходный код C#, веб-страница, изображение, аудиофайл.
 
@@ -5188,6 +5473,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.182.png">
+</picture>
 
 > * №183. Ввести номер химического элемента из первых пяти таблицы Менделеева (1–5). Вывести название элемента и его символ.
 
@@ -5213,6 +5502,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.183.png">
+</picture>
 
 > * №184. Ввести код статуса заказа в интернет-магазине (NEW, PAID, SHIPPED, DELIVERED, CANCELED). Вывести подсказку для клиента.
 
@@ -5238,6 +5531,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.184.png">
+</picture>
 
 > * №185. Ввести код системы счисления (2, 8, 10, 16) и перевести введенное десятичное число в выбранную систему (через методы класса Convert).
 
@@ -5265,6 +5562,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.185.png">
+</picture>
 
 > * №186. Ввести номер курса колледжа (1–4). Вывести: «Первокурсник», «Второй курс», «Предвыпускной курс», «Выпускник».
 
@@ -5289,6 +5590,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.186.png">
+</picture>
 
 > * №187. Ввести код климатической зоны (1 — Арктическая, 2 — Субарктическая, 3 — Умеренная, 4 — Субтропическая, 5 — Тропическая). Вывести краткую характеристику.
 
@@ -5314,6 +5619,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.187.png">
+</picture>
 
 > * №188. Ввести класс пожарной опасности (1–5). Вывести уровень угрозы и ограничения на посещение лесов.
 
@@ -5339,6 +5648,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.188.png">
+</picture>
 
 > * №189. Ввести номер спортивного разряда (1 — Юношеский, 2 — Взрослый, 3 — КМС, 4 — МС, 5 — МСМК). Вывести расшифровку.
 
@@ -5364,6 +5677,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.189.png">
+</picture>
 
 > * №190. Ввести код уровня доступа пользователя (G — Guest, U — User, M — Moderator, A — Administrator). Вывести перечень разрешенных действий.
 
@@ -5388,6 +5705,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.190.png">
+</picture>
 
 > * №191. Ввести букву ноты (C, D, E, F, G, A, B). Вывести русское словесное обозначение (До, Ре, Ми, Фа, Соль, Ля, Си).
 
@@ -5415,6 +5736,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.191.png">
+</picture>
 
 > * №192. Ввести номер типа кузова автомобиля (1 — Седан, 2 — Хэтчбек, 3 — Универсал, 4 — Купе, 5 — Внедорожник). Вывести описание вместимости и компоновки.
 
@@ -5440,6 +5765,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.192.png">
+</picture>
 
 > * №193. Ввести код типа датчика охранной сигнализации: M (движение), D (открытие двери), S (дым), W (протечка воды). Вывести сообщение о типе угрозы.
 
@@ -5464,6 +5793,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.193.png">
+</picture>
 
 > * №194. Ввести номер фазы Луны (1 — Новолуние, 2 — Первая четверть, 3 — Полнолуние, 4 — Последняя четверть). Вывести характеристику фазы.
 
@@ -5488,6 +5821,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.194.png">
+</picture>
 
 > * №195. Ввести символ разделителя пути в операционной системе (/ или \). Вывести, к какому семейству ОС относится разделитель (Unix/Linux или Windows).
 
@@ -5510,6 +5847,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.195.png">
+</picture>
 
 > * №196. Ввести номер поколения мобильной связи (2, 3, 4, 5). Вывести название стандарта (GPRS/EDGE, UMTS/HSPA, LTE, NR) и типичную скорость.
 
@@ -5534,6 +5875,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.196.png">
+</picture>
 
 > * №197. Ввести номер порта протокола (21, 22, 25, 80, 443). Вывести название сетевого протокола (FTP, SSH, SMTP, HTTP, HTTPS).
 
@@ -5559,6 +5904,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.197.png">
+</picture>
 
 > * №198. Ввести код режима стиральной машины (1 — Хлопок, 2 — Синтетика, 3 — Шерсть, 4 — Быстрая 15 мин, 5 — Отжим). Вывести температуру стирки и скорость отжима.
 
@@ -5584,6 +5933,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.198.png">
+</picture>
 
 > * №199. Ввести код тарифной зоны электроэнергии (1 — Пик, 2 — Полупик, 3 — Ночь). Вывести стоимость киловатт-часа.
 
@@ -5607,6 +5960,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.199.png">
+</picture>
 
 > * №200. Ввести код состояния потока выполнения в C# (Running, Suspended, Stopped, Aborted). Вывести пояснение жизненного цикла потока.
 
@@ -5631,3 +5988,7 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task3.2/1.1.200.png">
+</picture>
