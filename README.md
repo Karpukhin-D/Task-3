@@ -24,6 +24,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task_2/blob/main/task%202/3.1.1.png.png">
+</picture>
 
 > * №2. Пользователь вводит целое число. Проверить, является ли оно четным.
 ```csharp
