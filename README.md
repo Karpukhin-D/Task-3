@@ -2919,6 +2919,10 @@ class Program
     }
 }
 ```
+`Результат выполнения:`
+<picture>
+  <img src="https://github.com/Karpukhin-D/Task-3/blob/main/task%203/1.1.101.png">
+</picture>
 
 > * №102. Проверить, является ли введенное целое число положительным и четным одновременно.
 
